@@ -10,13 +10,13 @@ DCFTest实现了基于DCF的下列测试情景:
 
 ---
 
-**1. 外部依赖关系**  
+## 1. 外部依赖关系
 
 &#160; &#160; &#160; &#160; 在运行DCFTest之前，需要确保安装配置好了下面列出的依赖项。
 * DCF 3.1.0 
 * gcc 4.8.5
 
-**2. 设置**
+## 2. 配置
 
 * 将DCFTest安装到本地
 ```javascript
@@ -34,7 +34,7 @@ DCFTest实现了基于DCF的下列测试情景:
 [lenyb@slave02 DCFTest]$ export LD_LIBRARY_PATH=//data/toolchain/lib::$LD_LIBRARY_PATH
 ```
 
-**3. 运行**
+## 3. 运行
 
 **所有节点所在的服务器上均要配置DCFTest**
 * 运行build.sh以启动DCF
@@ -45,9 +45,15 @@ DCFTest实现了基于DCF的下列测试情景:
 
 ![DCF-Demo在GitHub上的仓库](./imgs/Figure3.png)
 
-**4. 使用方法**
+## 4. 使用方法
+
 * 在终端交互窗口中输入指令
 * 如果提示PASSED，代表操作成功，如果提示FAILED，则代表操作失败
 * 输入错误的指令或输入空指令后，会对程序支持的指令进行提示
 
 **至此，DCFTest已经部署完成**
+
+## 5. 测试
+
+&#160; &#160; &#160; &#160; 详细的测试过程将在<a href="http://localhost:4000/2022/12/07/DCFTest%EF%BC%9ADCF%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E7%9A%84%E8%AE%BE%E8%AE%A1/#more">《DCFTest：DCF测试框架的设计》</a>中记录。
+
