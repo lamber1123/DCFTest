@@ -1,35 +1,55 @@
-# DcfFrameworkDemo
+# DCFTest: Distributed Consensus Framework 的测试程序
+&#160; &#160; &#160; &#160; CFTest基于GitHub上的项目DCF-Demo（v1），该项目的作者叶神是我的师兄，我们设计的初衷是希望通过设计测试程序来验证DCF的可用性与性能，在验证DCF框架的可用性后，也便于后期和其他的分布式项目对接。
 
-## 框架介绍
-To be continue...
+![DCF-Demo在GitHub上的仓库](./imgs/Figure2.png)
 
-## 编译和运行
-在运行本项目之前需要编译[Distributed Consensus Framework](https://gitee.com/opengauss/DCF),编译成功后，把编译生成的动态链接库复制到当前目录下的lib文件夹下。
-### DCF框架的编译
-DCF是openGauss开发的一款一致性框架。具体的编译方式详见[Distributed Consensus Framework](https://gitee.com/opengauss/DCF)
+DCF-Demo项目地址：https://github.com/NPUWDBLab/DCF-Demo
 
-DCF编译具体步骤：
+DCFTest实现了基于DCF的下列测试情景:
+ * **读写测试**: DCFTest在程序内部提供了交互窗口，允许用户通过FCFTest所支持的读写指令对DCF进行读写数据。在不同的集群情境下，测试跨可用区的多副本复制。
+ * **集群故障测试**: DCF作为稳定可靠的一致性数据复制组件，为了测试DCF在任何条件下的可用性，DCFTest提供了可以模拟多种集群故障情况的指令。通过不同的指令组合，用户可以测试DCF在节点宕机、网络分区等情况下的可用性情况。
+ * **集群变更测试**: DCFTest提供指令可以组合，用以对容灾性自动与手动升降主备，集群状态查询，集群配置管理情景的测试。
 
-1. `cd build/linux/opengauss/`
-2. `sh build.sh -3rd [binarylibs path] -m Release -t cmake ` 
+---
 
-- 这里的`[binarylibs path]`可以是自己下载的`binarylibs`的路径 如果在服务器上 则可以直接利用data目录下的库第三方库，具体路径为:
+**1.外部依赖关系**  
 
-> `/data/toolchain/binarylibs`
+&#160; &#160; &#160; &#160; 在运行DCFTest之前，需要确保安装配置好了下面列出的依赖项。
+* DCF 3.1.0 
+* gcc 4.8.5
 
-如果执行后发现有如下报错：
-![plat_form_str_Error](./imgs/plat_form_str_ERROR.pic.jpg)
+**2.设置**
 
-执行:
-> export PLAT_FORM_STR=\`sh get_platform_str.sh\` 
+* 将DCFTest安装到本地
+```javascript
+# clone DCFTest to local
+[lenyb@slave02 DCFTest]$ git clone https://github.com/lamber1123/DCFTest.git
+```
+* 修改“DCFTest/DCFTestConfig.json”中的集群配置，将各集群节点对应的node_id、IP与port字段进行修改
+```javascript
+# set the node_id, IP and port
+[lenyb@slave02 DCFTest]$ vim DCFTestConfig.json
+```
+* 设置环境变量，将LD_LIBRARY_PATH设置为DCF生成的lib库路径
+```javascript
+set environment variable
+[lenyb@slave02 DCFTest]$ export LD_LIBRARY_PATH=//data/toolchain/lib::$LD_LIBRARY_PATH
+```
 
-编译成功如图显示：
+**3.运行**
 
-![libdcf.so](./imgs/%E7%94%9F%E6%88%90libdcf.so.jpg)
+**集群节点所在的服务器上均要安装配置DCFTest**
+* 运行build.sh以启动DCF
+```javascript
+# run DCFTest
+[lenyb@slave02 DCFTest]$ sh build.sh
+```
 
+![DCF-Demo在GitHub上的仓库](./imgs/Figure3.png)
 
-编译成功后的动态链接库生成在`DCF/output/lib`下，如果修改DCF源码，重新编译只需执行`make`即可
-### DcfFrameworkDemo框架的运行
-1. 设置目录下的`DcfFrameworkDemoConfig.json`.
-2. 关闭目标机器的防火墙
-3. 执行该文件夹下的build.sh脚本即可运行。
+**4.使用方法**
+* 在终端交互窗口中输入指令
+* 如果提示PASSED，代表操作成功，如果提示FAILED，则代表操作失败
+* 输入错误的指令或输入空指令后，会对程序支持的指令进行提示
+
+**至此，DCFTest已经部署完成**

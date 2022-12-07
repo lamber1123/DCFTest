@@ -129,7 +129,7 @@ int usr_cb_status_changed_notify(unsigned int stream_id, dcf_role_t new_role)
 
 void Read_Dcf_start_Config(char *config)
 {
-    int fd = open("../DcfFrameworkDemoConfig.json", O_RDONLY);
+    int fd = open("../DCFTestConfig.json", O_RDONLY);
     if (fd == -1)
     {
         printf("can not open the DcfFrameworkConfig.json file.\n");
@@ -350,7 +350,7 @@ int main(int argc, char *argv[])
 
         if (node_id == 5) 
         {
-            printf("\033[31m[ FAILED ]\033[0m start DCF failed， check node id.\n");
+            printf("\033[31m[ FAILED ]\033[0m start DCF failed, check node id.\n");
         }
     }
     printf("\n");
@@ -406,7 +406,7 @@ int main(int argc, char *argv[])
 
                 if (node_id == 5) 
                 {
-                    printf("\033[31m[ FAILED ]\033[0m start DCF failed， check node id.\n");
+                    printf("\033[31m[ FAILED ]\033[0m start DCF failed, check node id.\n");
                 }
             }
         }

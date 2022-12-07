@@ -1,541 +1,215 @@
-UTC+8 2022-12-07 20:34:44.546|DCF|24531|INFO>[DCF]Logger init succeed
-UTC+8 2022-12-07 20:34:44.547|DCF|24531|INFO>[LOG] file './node1/run/dcf.rlog' is added
-UTC+8 2022-12-07 20:34:44.547|DCF|24531|INFO>[LOG] file './node1/debug/dcf.dlog' is added
-UTC+8 2022-12-07 20:34:44.547|DCF|24531|INFO>[LOG] file './node1/oper/oper.log' is added
-UTC+8 2022-12-07 20:34:44.552|DCF|24531|INFO>[META]Md init succeed, metadata:[{"stream_id":1,"node_id":1,"ip":"172.19.0.202","port":26222,"role":"LEADER","weight":1,"group":0,"priority":0},{"stream_id":1,"node_id":2,"ip":"172.19.0.203","port":26222,"role":"FOLLOWER","weight":1,"group":0,"priority":0},{"stream_id":1,"node_id":3,"ip":"172.19.0.204","port":26222,"role":"FOLLOWER","weight":1,"group":0,"priority":0}] checksum:2201855076
-UTC+8 2022-12-07 20:34:44.552|DCF|24531|INFO>[MEC]mec_init_ssl: ssl is disabled.
-UTC+8 2022-12-07 20:34:44.552|DCF|24531|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
-UTC+8 2022-12-07 20:34:44.552|DCF|24533|INFO>[MEC]reactor thread started
-UTC+8 2022-12-07 20:34:44.552|DCF|24531|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
-UTC+8 2022-12-07 20:34:44.552|DCF|24534|INFO>[MEC]reactor thread started
-UTC+8 2022-12-07 20:34:44.553|DCF|24531|INFO>[MEC]connect to instance 2 channel id 0.
-UTC+8 2022-12-07 20:34:44.553|DCF|24536|INFO>[MEC]agent thread started, tid:139782122796800, close:0
-UTC+8 2022-12-07 20:34:44.553|DCF|24538|INFO>[MEC]agent thread started, tid:139782120691456, close:0
-UTC+8 2022-12-07 20:34:44.553|DCF|24531|INFO>[MEC]connect to instance 3 channel id 0.
-UTC+8 2022-12-07 20:34:44.553|DCF|24539|INFO>[MEC]agent thread started, tid:139782119638784, close:0
-UTC+8 2022-12-07 20:34:44.553|DCF|24531|INFO>[MEC]Mec init succeed
-UTC+8 2022-12-07 20:34:44.553|DCF|24537|INFO>[MEC]agent thread started, tid:139782121744128, close:0
-UTC+8 2022-12-07 20:34:44.577|DCF|24531|INFO>[STG]Stg init succeed
-UTC+8 2022-12-07 20:34:44.577|DCF|24531|INFO>[ELC]stream 1 init, cur_node_id 1, vote_for 0, last_hb_time 0
-UTC+8 2022-12-07 20:34:44.577|DCF|24531|INFO>[ELC]elc_status_check_init ok.
-UTC+8 2022-12-07 20:34:44.577|DCF|24531|INFO>[ELC]Elc init succeed
-UTC+8 2022-12-07 20:34:44.578|DCF|24531|INFO>rep_leader_init: flow_ctrl_type=1.
-UTC+8 2022-12-07 20:34:44.578|DCF|24531|INFO>[monitor]monitor init start.
-UTC+8 2022-12-07 20:34:44.578|DCF|24531|INFO>[monitor]dcf log path: ./node1
-UTC+8 2022-12-07 20:34:44.578|DCF|24531|INFO>[monitor]monitor init end.
-UTC+8 2022-12-07 20:34:44.578|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:34:44.578|DCF|24549|INFO>leader monitor thread start.
-UTC+8 2022-12-07 20:34:44.578|DCF|24547|INFO>[LOG] file './node1/profile/dcf.plog' is added
-UTC+8 2022-12-07 20:34:44.579|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:34:44.579|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:34:44.579|DCF|24531|INFO>rep_leader_init finished
-UTC+8 2022-12-07 20:34:44.579|DCF|24531|INFO>[REP]rep_init succeed
-UTC+8 2022-12-07 20:34:44.579|DCF|24531|INFO>init exception report
-UTC+8 2022-12-07 20:34:44.579|DCF|24531|INFO>[DCF]Tool init succeed
-UTC+8 2022-12-07 20:34:44.579|DCF|24531|INFO>dcf start succeed.
-UTC+8 2022-12-07 20:34:47.882|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:34:48.785|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:34:48.790|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:34:48.790|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:34:51.795|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:34:52.198|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:34:52.200|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:34:52.201|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:34:55.505|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:34:56.314|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:34:56.316|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:34:56.316|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:34:59.520|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:00.022|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:00.027|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:00.027|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:03.130|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:03.734|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:03.736|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:03.737|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:06.840|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:07.043|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:07.045|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:07.046|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:10.149|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:10.854|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:10.856|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:10.856|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:13.960|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:15.364|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:15.365|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:15.365|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:18.470|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:20.178|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:20.180|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:20.180|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:23.285|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:24.087|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:24.088|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:24.089|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:26.785|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:35:26.786|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:35:26.786|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:35:26.831|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:35:26.831|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:35:26.831|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:35:26.877|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:35:26.877|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:35:26.877|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:35:26.922|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:35:26.923|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:35:26.923|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:35:26.968|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:35:26.968|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:35:26.968|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:35:27.293|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:28.196|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:28.198|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:28.198|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:31.403|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:32.406|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:32.410|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:32.410|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:35.515|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:36.218|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:36.220|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:36.220|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:39.324|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:39.728|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:39.733|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:39.733|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:42.938|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:43.840|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:43.849|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:43.849|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:46.953|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:47.656|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:47.659|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:47.659|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:50.863|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:51.265|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:51.267|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:51.267|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:54.471|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:55.181|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:55.184|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:55.184|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:35:58.288|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:59.992|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:35:59.997|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:35:59.997|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:03.101|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:03.904|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:03.905|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:03.906|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:07.209|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:08.312|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:08.315|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:08.316|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:11.520|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:12.025|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:12.029|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:12.030|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:15.334|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:16.136|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:16.138|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:16.138|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:19.442|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:20.645|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:20.646|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:20.647|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:23.852|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:24.354|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:24.356|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:24.356|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:27.561|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:29.065|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:29.068|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:29.069|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:32.273|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:33.375|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:33.377|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:33.377|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:36.580|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:36.785|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:36.787|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:36.787|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:39.991|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:40.898|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:40.903|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:40.903|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:44.007|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:44.510|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:44.515|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:44.515|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:47.719|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:48.121|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:48.123|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:48.123|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:51.226|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:51.929|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:51.931|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:51.931|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:55.135|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:56.038|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:56.044|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:56.044|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:36:59.247|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:59.849|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:36:59.851|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:36:59.851|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:03.155|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:04.169|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:04.171|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:04.171|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:07.375|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:07.877|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:07.878|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:07.878|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:10.982|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:11.184|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:11.186|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:11.186|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:14.490|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:15.593|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:15.599|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:15.600|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:18.603|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:19.006|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:19.007|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:19.007|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:22.111|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:23.014|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:23.016|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:23.016|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:26.320|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:26.824|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:26.826|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:26.826|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:30.030|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:30.637|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:30.638|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:30.638|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:33.742|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:35.145|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:35.146|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:35.147|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:38.451|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:38.653|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:38.655|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:38.655|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:41.959|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:43.163|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:43.172|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:43.172|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:46.377|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:46.681|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:46.685|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:46.685|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:49.789|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:50.296|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:50.301|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:50.301|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:52.655|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:37:52.656|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:37:52.656|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:37:52.704|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:37:52.704|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
-UTC+8 2022-12-07 20:37:52.705|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:37:52.705|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
-UTC+8 2022-12-07 20:37:52.707|DCF|24687|INFO>[MEC]agent thread started, tid:139781681805056, close:0
-UTC+8 2022-12-07 20:37:52.707|DCF|24688|INFO>[MEC]agent thread started, tid:139781680752384, close:0
-UTC+8 2022-12-07 20:37:52.707|DCF|24689|INFO>[MEC]work thread started, tid:139781675366144, close:0
-UTC+8 2022-12-07 20:37:52.707|DCF|24690|INFO>[MEC]work thread started, tid:139781674313472, close:0
-UTC+8 2022-12-07 20:37:52.745|DCF|24537|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:37:52.745|DCF|24538|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:37:52.745|DCF|24537|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:37:52.745|DCF|24537|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
-UTC+8 2022-12-07 20:37:52.745|DCF|24537|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:37:52.746|DCF|24538|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:37:52.746|DCF|24538|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
-UTC+8 2022-12-07 20:37:52.746|DCF|24538|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:37:53.104|DCF|24691|INFO>[MEC]work thread started, tid:139781673260800, close:0
-UTC+8 2022-12-07 20:37:53.605|DCF|24544|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:53.642|DCF|24692|INFO>[MEC]work thread started, tid:139781672208128, close:0
-UTC+8 2022-12-07 20:37:54.708|DCF|24544|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:37:54.709|DCF|24544|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
-UTC+8 2022-12-07 20:37:54.709|DCF|24544|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:37:54.709|DCF|24690|INFO>[ELC]receive ack from node_id=2, stream_id=1, current_node=1, current_term=1, role=5, work_mode=0 peer_term=1, vote_granted=1 work_mode=0
-UTC+8 2022-12-07 20:37:54.709|DCF|24690|INFO>[ELC]get vote from stream_id=1, node_id=2, term=1, vote_count=2
-UTC+8 2022-12-07 20:37:54.709|DCF|24690|INFO>[ELC]pre-voting succeeded, stream_id=1, node_id=1, current_term=1
-UTC+8 2022-12-07 20:37:54.712|DCF|24690|INFO>[ELC]get vote from stream_id=1, node_id=1, term=2, vote_count=1
-UTC+8 2022-12-07 20:37:54.712|DCF|24690|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=2 last_log.term=0 last_log.index=0 vote_flag=0x0 work_mode=0
-UTC+8 2022-12-07 20:37:54.719|DCF|24690|INFO>[ELC]receive ack from node_id=2, stream_id=1, current_node=1, current_term=2, role=6, work_mode=0 peer_term=2, vote_granted=1 work_mode=0
-UTC+8 2022-12-07 20:37:54.719|DCF|24690|INFO>[ELC]get vote from stream_id=1, node_id=2, term=2, vote_count=2
-UTC+8 2022-12-07 20:37:54.719|DCF|24690|INFO>[ELC]election is successful, stream_id=1, node_id=1, current_term=2
-UTC+8 2022-12-07 20:37:54.720|DCF|24545|INFO>[ELC]best_prio:node=2,role=2,group=0,prio=0,in_major=1,is_future_hb=1,last_recv=5466513828797
-UTC+8 2022-12-07 20:37:54.720|DCF|24545|INFO>[ELC]best_prio:cur_node=1,leader_group=0,best_group=0,best_prio=0,rcv_best_priority_node=0
-UTC+8 2022-12-07 20:37:54.720|DCF|24545|INFO>[ELC]max_prio_leader=0 force_vote=0 role=1
-UTC+8 2022-12-07 20:37:54.720|DCF|24545|INFO>rep_leader_reset finished
-UTC+8 2022-12-07 20:37:55.609|DCF|24547|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:37:55.609|DCF|24547|INFO>[ELC]update node role ok. default_role=1, role=1.
-UTC+8 2022-12-07 20:37:55.609|DCF|24547|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:37:55.609|DCF|24547|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:38:21.280|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:38:21.281|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:38:21.281|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:38:21.327|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:38:21.327|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
-UTC+8 2022-12-07 20:38:21.327|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:38:21.327|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
-UTC+8 2022-12-07 20:38:21.656|DCF|24688|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:38:21.656|DCF|24687|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:38:21.656|DCF|24688|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:38:21.656|DCF|24688|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
-UTC+8 2022-12-07 20:38:21.657|DCF|24688|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:38:21.657|DCF|24687|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:38:21.657|DCF|24687|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
-UTC+8 2022-12-07 20:38:21.657|DCF|24687|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:39:42.725|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:39:42.725|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:39:42.725|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:39:42.774|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:39:42.774|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
-UTC+8 2022-12-07 20:39:42.774|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:39:42.775|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
-UTC+8 2022-12-07 20:39:42.817|DCF|24536|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:39:42.817|DCF|24539|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:39:42.817|DCF|24536|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:39:42.817|DCF|24536|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
-UTC+8 2022-12-07 20:39:42.817|DCF|24536|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:39:42.817|DCF|24539|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:39:42.817|DCF|24539|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
-UTC+8 2022-12-07 20:39:42.817|DCF|24539|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:41:12.697|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:41:12.697|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:41:12.697|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:41:12.747|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:41:12.747|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
-UTC+8 2022-12-07 20:41:12.747|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:41:12.747|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
-UTC+8 2022-12-07 20:41:12.763|DCF|24536|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:41:12.764|DCF|24539|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:41:12.764|DCF|24536|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:41:12.764|DCF|24536|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
-UTC+8 2022-12-07 20:41:12.764|DCF|24536|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:41:12.764|DCF|24539|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:41:12.764|DCF|24539|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
-UTC+8 2022-12-07 20:41:12.764|DCF|24539|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:41:59.484|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:41:59.485|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:41:59.485|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:41:59.533|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:41:59.533|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
-UTC+8 2022-12-07 20:41:59.534|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:41:59.534|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
-UTC+8 2022-12-07 20:41:59.538|DCF|24539|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:41:59.538|DCF|24536|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:41:59.538|DCF|24539|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:41:59.538|DCF|24539|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
-UTC+8 2022-12-07 20:41:59.538|DCF|24539|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:41:59.539|DCF|24536|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:41:59.539|DCF|24536|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
-UTC+8 2022-12-07 20:41:59.539|DCF|24536|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:42:16.255|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:42:16.256|DCF|24535|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:42:16.256|DCF|24535|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:42:16.302|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:42:16.302|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
-UTC+8 2022-12-07 20:42:16.302|DCF|24535|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:42:16.302|DCF|24535|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
-UTC+8 2022-12-07 20:42:16.342|DCF|24537|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:42:16.342|DCF|24538|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:42:16.342|DCF|24537|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:42:16.342|DCF|24537|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
-UTC+8 2022-12-07 20:42:16.342|DCF|24537|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:42:16.342|DCF|24538|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:42:16.342|DCF|24538|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
-UTC+8 2022-12-07 20:42:16.342|DCF|24538|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:43:04.557|DCF|24960|INFO>[DCF]Logger init succeed
-UTC+8 2022-12-07 20:43:04.557|DCF|24960|INFO>[LOG] file './node1/run/dcf.rlog' is added
-UTC+8 2022-12-07 20:43:04.557|DCF|24960|INFO>[LOG] file './node1/debug/dcf.dlog' is added
-UTC+8 2022-12-07 20:43:04.557|DCF|24960|INFO>[LOG] file './node1/oper/oper.log' is added
-UTC+8 2022-12-07 20:43:04.558|DCF|24960|INFO>[META]Md init succeed, metadata: checksum:2201855076
-UTC+8 2022-12-07 20:43:04.558|DCF|24960|INFO>[MEC]mec_init_ssl: ssl is disabled.
-UTC+8 2022-12-07 20:43:04.559|DCF|24960|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
-UTC+8 2022-12-07 20:43:04.559|DCF|24962|INFO>[MEC]reactor thread started
-UTC+8 2022-12-07 20:43:04.559|DCF|24960|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
-UTC+8 2022-12-07 20:43:04.559|DCF|24963|INFO>[MEC]reactor thread started
-UTC+8 2022-12-07 20:43:04.559|DCF|24960|INFO>[MEC]connect to instance 2 channel id 0.
-UTC+8 2022-12-07 20:43:04.559|DCF|24965|INFO>[MEC]agent thread started, tid:139695607629568, close:0
-UTC+8 2022-12-07 20:43:04.559|DCF|24966|INFO>[MEC]agent thread started, tid:139695606576896, close:0
-UTC+8 2022-12-07 20:43:04.559|DCF|24967|INFO>[MEC]agent thread started, tid:139695605524224, close:0
-UTC+8 2022-12-07 20:43:04.559|DCF|24960|INFO>[MEC]connect to instance 3 channel id 0.
-UTC+8 2022-12-07 20:43:04.559|DCF|24960|INFO>[MEC]Mec init succeed
-UTC+8 2022-12-07 20:43:04.559|DCF|24968|INFO>[MEC]agent thread started, tid:139695604471552, close:0
-UTC+8 2022-12-07 20:43:04.559|DCF|24965|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:43:04.559|DCF|24966|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:43:04.559|DCF|24965|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:43:04.559|DCF|24965|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
-UTC+8 2022-12-07 20:43:04.559|DCF|24965|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:43:04.560|DCF|24966|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:43:04.560|DCF|24966|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
-UTC+8 2022-12-07 20:43:04.560|DCF|24966|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:43:04.581|DCF|24960|INFO>[STG]Stg init succeed
-UTC+8 2022-12-07 20:43:04.581|DCF|24960|INFO>[ELC]stream 1 init, cur_node_id 1, vote_for 1, last_hb_time 0
-UTC+8 2022-12-07 20:43:04.582|DCF|24960|INFO>[ELC]elc_status_check_init ok.
-UTC+8 2022-12-07 20:43:04.582|DCF|24960|INFO>[ELC]Elc init succeed
-UTC+8 2022-12-07 20:43:04.582|DCF|24960|INFO>rep_leader_init: flow_ctrl_type=1.
-UTC+8 2022-12-07 20:43:04.582|DCF|24960|INFO>[monitor]monitor init start.
-UTC+8 2022-12-07 20:43:04.582|DCF|24973|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:43:04.582|DCF|24960|INFO>[monitor]dcf log path: ./node1
-UTC+8 2022-12-07 20:43:04.582|DCF|24960|INFO>[monitor]monitor init end.
-UTC+8 2022-12-07 20:43:04.582|DCF|24976|INFO>[LOG] file './node1/profile/dcf.plog' is added
-UTC+8 2022-12-07 20:43:04.582|DCF|24978|INFO>leader monitor thread start.
-UTC+8 2022-12-07 20:43:04.584|DCF|24973|INFO>[ELC]get vote from stream_id=1, node_id=1, term=2, vote_count=1
-UTC+8 2022-12-07 20:43:04.584|DCF|24981|INFO>[MEC]work thread started, tid:139695168456448, close:0
-UTC+8 2022-12-07 20:43:04.584|DCF|24973|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=2 last_log.term=2 last_log.index=1 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:43:04.585|DCF|24960|INFO>rep_leader_init finished
-UTC+8 2022-12-07 20:43:04.585|DCF|24960|INFO>[REP]rep_init succeed
-UTC+8 2022-12-07 20:43:04.585|DCF|24960|INFO>init exception report
-UTC+8 2022-12-07 20:43:04.585|DCF|24960|INFO>[DCF]Tool init succeed
-UTC+8 2022-12-07 20:43:04.585|DCF|24960|INFO>dcf start succeed.
-UTC+8 2022-12-07 20:43:05.337|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:05.338|DCF|24964|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
-UTC+8 2022-12-07 20:43:05.338|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:05.338|DCF|24964|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
-UTC+8 2022-12-07 20:43:05.391|DCF|24989|INFO>[MEC]work thread started, tid:139695164245760, close:0
-UTC+8 2022-12-07 20:43:05.404|DCF|24990|INFO>[MEC]work thread started, tid:139695158859520, close:0
-UTC+8 2022-12-07 20:43:05.560|DCF|24999|INFO>[MEC]work thread started, tid:139695157806848, close:0
-UTC+8 2022-12-07 20:43:05.798|DCF|24989|INFO>[ELC]Send response to node_id=2, stream_id=1, current_node=1, current_term=2, vote_granted=1, work_mode=0
-UTC+8 2022-12-07 20:43:05.804|DCF|24989|INFO>[ELC]Send response to node_id=2, stream_id=1, current_node=1, current_term=3, vote_granted=1, work_mode=0
-UTC+8 2022-12-07 20:43:06.343|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:06.343|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:06.343|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:06.343|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:07.339|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:07.340|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:07.340|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:07.340|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:15.000|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:15.000|DCF|24964|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:43:15.000|DCF|24964|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:43:15.046|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:15.046|DCF|24964|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
-UTC+8 2022-12-07 20:43:15.046|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:15.047|DCF|24964|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
-UTC+8 2022-12-07 20:43:15.079|DCF|24989|INFO>[ELC]Send response to node_id=2, stream_id=1, current_node=1, current_term=3, vote_granted=1, work_mode=0
-UTC+8 2022-12-07 20:43:15.565|DCF|24967|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:43:15.565|DCF|25026|INFO>[MEC]agent thread started, tid:139695156754176, close:0
-UTC+8 2022-12-07 20:43:15.565|DCF|24968|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 26222.
-UTC+8 2022-12-07 20:43:15.565|DCF|25027|INFO>[MEC]agent thread started, tid:139695155701504, close:0
-UTC+8 2022-12-07 20:43:15.565|DCF|24967|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:43:15.565|DCF|24967|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
-UTC+8 2022-12-07 20:43:15.565|DCF|24967|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:43:15.566|DCF|24968|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:43:15.566|DCF|24968|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
-UTC+8 2022-12-07 20:43:15.566|DCF|24968|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:43:16.498|DCF|24973|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
-UTC+8 2022-12-07 20:43:16.500|DCF|24973|INFO>[ELC]get vote from stream_id=1, node_id=1, term=3, vote_count=1
-UTC+8 2022-12-07 20:43:16.500|DCF|24973|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=3 last_log.term=3 last_log.index=2 vote_flag=0x1 work_mode=0
-UTC+8 2022-12-07 20:43:16.500|DCF|24989|INFO>[ELC]receive ack from node_id=2, stream_id=1, current_node=1, current_term=3, role=5, work_mode=0 peer_term=3, vote_granted=1 work_mode=0
-UTC+8 2022-12-07 20:43:16.500|DCF|24989|INFO>[ELC]get vote from stream_id=1, node_id=2, term=3, vote_count=2
-UTC+8 2022-12-07 20:43:16.500|DCF|24989|INFO>[ELC]pre-voting succeeded, stream_id=1, node_id=1, current_term=3
-UTC+8 2022-12-07 20:43:16.503|DCF|24989|INFO>[ELC]get vote from stream_id=1, node_id=1, term=4, vote_count=1
-UTC+8 2022-12-07 20:43:16.503|DCF|24989|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=4 last_log.term=3 last_log.index=2 vote_flag=0x0 work_mode=0
-UTC+8 2022-12-07 20:43:16.506|DCF|24989|INFO>[ELC]receive ack from node_id=2, stream_id=1, current_node=1, current_term=4, role=6, work_mode=0 peer_term=4, vote_granted=1 work_mode=0
-UTC+8 2022-12-07 20:43:16.506|DCF|24989|INFO>[ELC]get vote from stream_id=1, node_id=2, term=4, vote_count=2
-UTC+8 2022-12-07 20:43:16.506|DCF|24989|INFO>[ELC]election is successful, stream_id=1, node_id=1, current_term=4
-UTC+8 2022-12-07 20:43:16.506|DCF|24974|INFO>[ELC]best_prio:node=2,role=5,group=0,prio=0,in_major=1,is_future_hb=0,last_recv=5466836178645
-UTC+8 2022-12-07 20:43:16.506|DCF|24974|INFO>[ELC]best_prio:cur_node=1,leader_group=0,best_group=0,best_prio=0,rcv_best_priority_node=0
-UTC+8 2022-12-07 20:43:16.507|DCF|24974|INFO>[ELC]max_prio_leader=0 force_vote=0 role=1
-UTC+8 2022-12-07 20:43:16.507|DCF|24974|INFO>rep_leader_reset finished
-UTC+8 2022-12-07 20:43:16.591|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:16.591|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=1.
-UTC+8 2022-12-07 20:43:16.591|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:16.591|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:22.450|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:22.450|DCF|24964|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:43:22.450|DCF|24964|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:43:22.544|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:22.545|DCF|24964|INFO>[MEC]mec_accept: channel id 768 priv 0 receive ok.
-UTC+8 2022-12-07 20:43:22.545|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:22.545|DCF|24964|INFO>[MEC]mec_accept: channel id 768 priv 1 receive ok.
-UTC+8 2022-12-07 20:43:22.549|DCF|25029|INFO>[MEC]work thread started, tid:139695154648832, close:0
-UTC+8 2022-12-07 20:43:22.580|DCF|24989|INFO>[ELC]Send response to node_id=3, stream_id=1, current_node=1, current_term=4, vote_granted=1, work_mode=0
-UTC+8 2022-12-07 20:43:22.589|DCF|24974|INFO>[ELC]best_prio:node=2,role=2,group=0,prio=0,in_major=1,is_future_hb=0,last_recv=5466842187432
-UTC+8 2022-12-07 20:43:22.589|DCF|24989|INFO>[ELC]Send response to node_id=3, stream_id=1, current_node=1, current_term=16, vote_granted=1, work_mode=0
-UTC+8 2022-12-07 20:43:22.589|DCF|24974|INFO>[ELC]best_prio:cur_node=1,leader_group=0,best_group=0,best_prio=0,rcv_best_priority_node=0
-UTC+8 2022-12-07 20:43:22.589|DCF|24974|INFO>[ELC]max_prio_leader=0 force_vote=0 role=2
-UTC+8 2022-12-07 20:43:22.592|DCF|25026|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 26222.
-UTC+8 2022-12-07 20:43:22.592|DCF|25026|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:43:22.592|DCF|25026|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 0.
-UTC+8 2022-12-07 20:43:22.592|DCF|25026|INFO>[MEC]connect to instance 3 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:43:22.593|DCF|25027|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 26222.
-UTC+8 2022-12-07 20:43:22.595|DCF|25027|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:43:22.595|DCF|25027|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 1.
-UTC+8 2022-12-07 20:43:22.595|DCF|25027|INFO>[MEC]connect to instance 3 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:43:23.570|DCF|25030|INFO>[MEC]work thread started, tid:139694981367552, close:0
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.584|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.585|DCF|24976|INFO>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.586|DCF|24976|INFO>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:25.586|DCF|24976|INFO>LOG_SUPPRESS_BEGIN>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
-UTC+8 2022-12-07 20:43:25.586|DCF|24976|INFO>LOG_SUPPRESS_BEGIN>[ELC]update node role ok. default_role=1, role=2.
-UTC+8 2022-12-07 20:43:25.586|DCF|24976|INFO>LOG_SUPPRESS_BEGIN>[ELC]update node group ok. new_group=0.
-UTC+8 2022-12-07 20:43:25.586|DCF|24976|INFO>LOG_SUPPRESS_BEGIN>[ELC]update node priority ok. new_priority=0.
-UTC+8 2022-12-07 20:43:44.828|DCF|24989|INFO>[ELC]Send response to node_id=2, stream_id=1, current_node=1, current_term=16, vote_granted=1, work_mode=0
-UTC+8 2022-12-07 20:43:44.834|DCF|24989|INFO>[ELC]Send response to node_id=2, stream_id=1, current_node=1, current_term=17, vote_granted=1, work_mode=0
-UTC+8 2022-12-07 20:43:48.671|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:48.671|DCF|24964|ERROR>[MEC]cs_read_bytes failed.
-UTC+8 2022-12-07 20:43:48.671|DCF|24964|ERROR>[MEC]init pipe failed.
-UTC+8 2022-12-07 20:43:48.761|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:48.761|DCF|24964|INFO>[MEC]mec_accept: channel id 768 priv 0 receive ok.
-UTC+8 2022-12-07 20:43:48.761|DCF|24964|INFO>[MEC]mec_accept: received req, start accept...
-UTC+8 2022-12-07 20:43:48.762|DCF|24964|INFO>[MEC]mec_accept: channel id 768 priv 1 receive ok.
-UTC+8 2022-12-07 20:43:48.786|DCF|25027|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 26222.
-UTC+8 2022-12-07 20:43:48.786|DCF|25027|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:43:48.786|DCF|25027|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 1.
-UTC+8 2022-12-07 20:43:48.786|DCF|25027|INFO>[MEC]connect to instance 3 channel id 0, priv 1 success.
-UTC+8 2022-12-07 20:43:48.789|DCF|25026|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 26222.
-UTC+8 2022-12-07 20:43:48.789|DCF|25026|INFO>[MEC]cs_open_tcp_link success.
-UTC+8 2022-12-07 20:43:48.789|DCF|25026|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 0.
-UTC+8 2022-12-07 20:43:48.789|DCF|25026|INFO>[MEC]connect to instance 3 channel id 0, priv 0 success.
-UTC+8 2022-12-07 20:43:48.797|DCF|24989|INFO>[ELC]not timeout yet, votefor=2 current_term=17 candidate_term=17 req_vote_flag=1
-UTC+8 2022-12-07 20:43:48.797|DCF|24989|INFO>[ELC]Send response to node_id=3, stream_id=1, current_node=1, current_term=17, vote_granted=0, work_mode=0
-UTC+8 2022-12-07 20:55:15.071|DCF|24973|INFO>[LOG] file './node1/debug/dcf_20221207205515071.dlog' is added
-UTC+8 2022-12-07 20:55:15.071|DCF|24973|INFO>[LOG] file './node1/debug/dcf.dlog' is added
-UTC+8 2022-12-07 21:13:30.388|DCF|24989|INFO>[LOG] file './node1/debug/dcf_20221207211330388.dlog' is added
-UTC+8 2022-12-07 21:13:30.388|DCF|24989|INFO>[LOG] file './node1/debug/dcf.dlog' is added
+UTC+8 2022-12-08 00:00:24.541|DCF|38657|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-08 00:00:24.542|DCF|38657|INFO>[LOG] file './node1/run/dcf.rlog' is added
+UTC+8 2022-12-08 00:00:24.542|DCF|38657|INFO>[LOG] file './node1/debug/dcf.dlog' is added
+UTC+8 2022-12-08 00:00:24.542|DCF|38657|INFO>[LOG] file './node1/oper/oper.log' is added
+UTC+8 2022-12-08 00:00:24.548|DCF|38657|INFO>[META]Md init succeed, metadata:[{"stream_id":1,"node_id":1,"ip":"172.19.0.202","port":27222,"role":"LEADER","weight":1,"group":0,"priority":0},{"stream_id":1,"node_id":2,"ip":"172.19.0.203","port":27222,"role":"FOLLOWER","weight":1,"group":0,"priority":0},{"stream_id":1,"node_id":3,"ip":"172.19.0.204","port":27222,"role":"FOLLOWER","weight":1,"group":0,"priority":0}] checksum:3182891528
+UTC+8 2022-12-08 00:00:24.549|DCF|38657|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-08 00:00:24.549|DCF|38659|INFO>[MEC]reactor thread started
+UTC+8 2022-12-08 00:00:24.549|DCF|38657|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-08 00:00:24.549|DCF|38657|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-08 00:00:24.549|DCF|38660|INFO>[MEC]reactor thread started
+UTC+8 2022-12-08 00:00:24.549|DCF|38662|INFO>[MEC]agent thread started, tid:140130076124928, close:0
+UTC+8 2022-12-08 00:00:24.549|DCF|38657|INFO>[MEC]connect to instance 2 channel id 0.
+UTC+8 2022-12-08 00:00:24.549|DCF|38663|INFO>[MEC]agent thread started, tid:140130075072256, close:0
+UTC+8 2022-12-08 00:00:24.549|DCF|38664|INFO>[MEC]agent thread started, tid:140130074019584, close:0
+UTC+8 2022-12-08 00:00:24.550|DCF|38657|INFO>[MEC]connect to instance 3 channel id 0.
+UTC+8 2022-12-08 00:00:24.550|DCF|38665|INFO>[MEC]agent thread started, tid:140130072966912, close:0
+UTC+8 2022-12-08 00:00:24.550|DCF|38657|INFO>[MEC]Mec init succeed
+UTC+8 2022-12-08 00:00:24.574|DCF|38657|INFO>[STG]Stg init succeed
+UTC+8 2022-12-08 00:00:24.574|DCF|38657|INFO>[ELC]stream 1 init, cur_node_id 1, vote_for 0, last_hb_time 0
+UTC+8 2022-12-08 00:00:24.574|DCF|38657|INFO>[ELC]elc_status_check_init ok.
+UTC+8 2022-12-08 00:00:24.575|DCF|38657|INFO>[ELC]Elc init succeed
+UTC+8 2022-12-08 00:00:24.575|DCF|38657|INFO>rep_leader_init: flow_ctrl_type=1.
+UTC+8 2022-12-08 00:00:24.575|DCF|38657|INFO>[monitor]monitor init start.
+UTC+8 2022-12-08 00:00:24.575|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:24.575|DCF|38657|INFO>[monitor]dcf log path: ./node1
+UTC+8 2022-12-08 00:00:24.575|DCF|38657|INFO>[monitor]monitor init end.
+UTC+8 2022-12-08 00:00:24.575|DCF|38675|INFO>leader monitor thread start.
+UTC+8 2022-12-08 00:00:24.575|DCF|38673|INFO>[LOG] file './node1/profile/dcf.plog' is added
+UTC+8 2022-12-08 00:00:24.576|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:24.576|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:00:24.576|DCF|38657|INFO>rep_leader_init finished
+UTC+8 2022-12-08 00:00:24.576|DCF|38657|INFO>[REP]rep_init succeed
+UTC+8 2022-12-08 00:00:24.576|DCF|38657|INFO>init exception report
+UTC+8 2022-12-08 00:00:24.577|DCF|38657|INFO>[DCF]Tool init succeed
+UTC+8 2022-12-08 00:00:24.577|DCF|38657|INFO>dcf start succeed.
+UTC+8 2022-12-08 00:00:27.880|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:28.383|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:28.385|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:28.385|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:00:31.589|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:32.297|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:32.300|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:32.300|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:00:35.604|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:36.809|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:36.811|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:36.811|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:00:40.115|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:40.619|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:40.620|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:40.620|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:00:43.824|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:44.935|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:44.937|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:44.937|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:00:48.241|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:49.148|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:49.150|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:49.150|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:00:52.454|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:53.162|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:53.163|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:53.163|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:00:56.267|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:57.872|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:00:57.874|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:00:57.874|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:01.178|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:02.284|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:02.287|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:02.287|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:05.490|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:05.796|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:05.801|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:05.801|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:09.105|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:09.513|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:09.514|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:09.514|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:12.818|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:13.821|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:13.823|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:13.823|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:17.127|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:17.634|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:17.636|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:17.636|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:20.740|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:21.550|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:21.556|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:21.557|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:24.861|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:25.969|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:25.971|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:25.971|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:29.075|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:29.480|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:29.481|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:29.482|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:32.585|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:34.193|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:34.196|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:34.196|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:37.400|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:38.907|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:38.908|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:38.908|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:42.112|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:42.214|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:42.216|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:42.216|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:45.420|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:47.330|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:47.339|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:47.339|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:50.443|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:51.246|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:51.251|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:51.251|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:54.355|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:54.657|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:54.697|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:54.697|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:01:57.801|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:58.103|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:01:58.106|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:01:58.106|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:01.310|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:02.013|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:02.014|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:02.014|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:05.218|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:06.325|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:06.330|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:06.331|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:09.634|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:10.638|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:10.640|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:10.640|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:13.744|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:14.747|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:14.751|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:14.751|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:18.055|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:18.262|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:18.265|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:18.265|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:21.368|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:21.771|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:21.775|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:21.775|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:24.878|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:25.881|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:25.884|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:25.884|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:29.188|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:29.490|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:29.499|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:29.499|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:32.703|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:33.605|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:33.608|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:33.608|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:36.712|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:37.621|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:37.630|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:37.630|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:40.734|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:41.537|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:41.539|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:41.539|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:44.643|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:45.046|DCF|38670|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:45.053|DCF|38670|INFO>[ELC]get vote from stream_id=1, node_id=1, term=1, vote_count=1
+UTC+8 2022-12-08 00:02:45.053|DCF|38670|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=1 last_log.term=0 last_log.index=0 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-08 00:02:48.257|DCF|38670|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-08 00:02:48.779|DCF|38657|INFO>begin to clear_resource
+UTC+8 2022-12-08 00:02:49.591|DCF|38677|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:49.594|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:49.594|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:49.608|DCF|38672|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:49.608|DCF|38672|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:50.094|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:50.094|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:50.594|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:50.594|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:50.608|DCF|38672|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:50.608|DCF|38672|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:50.787|DCF|38675|INFO>leader monitor thread end.
+UTC+8 2022-12-08 00:02:50.787|DCF|38657|INFO>rep_leader_deinit finished
+UTC+8 2022-12-08 00:02:51.094|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:51.094|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:51.590|DCF|38674|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:51.590|DCF|38674|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:51.590|DCF|38674|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:51.590|DCF|38674|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:51.594|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:51.595|DCF|38673|ERROR>[ELC]election module has not been initialized
+UTC+8 2022-12-08 00:02:53.638|DCF|38662|INFO>[MEC]agent thread closed, tid:140130076124928, close:1
+UTC+8 2022-12-08 00:02:53.638|DCF|38664|INFO>[MEC]agent thread closed, tid:140130074019584, close:1
+UTC+8 2022-12-08 00:02:53.688|DCF|38663|INFO>[MEC]agent thread closed, tid:140130075072256, close:1
+UTC+8 2022-12-08 00:02:53.688|DCF|38665|INFO>[MEC]agent thread closed, tid:140130072966912, close:1
+UTC+8 2022-12-08 00:02:53.735|DCF|38660|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-08 00:02:53.739|DCF|38659|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-08 00:02:53.739|DCF|38657|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-08 00:02:53.739|DCF|38657|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-08 00:02:53.739|DCF|38657|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-08 00:02:53.739|DCF|38657|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-08 00:02:53.739|DCF|38657|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-08 00:02:53.739|DCF|38657|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-08 00:02:53.739|DCF|38657|INFO>[MEC]disconnect node 2.
+UTC+8 2022-12-08 00:02:53.739|DCF|38657|INFO>[MEC]disconnect node 3.
+UTC+8 2022-12-08 00:02:54.095|DCF|38657|INFO>deinit exception report
+UTC+8 2022-12-08 00:02:54.585|DCF|38657|INFO>clear_resource succeed
+UTC+8 2022-12-08 00:02:54.585|DCF|38657|INFO>dcf stop succeed
