@@ -1,0 +1,1 @@
+[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 26222,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 26222, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 26222, "role" : "FOLLOWER"} ]
