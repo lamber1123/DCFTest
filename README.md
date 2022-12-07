@@ -1,7 +1,5 @@
 # DCFTest: DCF框架的测试程序
-&#160; &#160; &#160; &#160; CFTest基于GitHub上的项目DCF-Demo（v1），作者是我的师兄叶神。我们希望通过设计DCF测试程序来验证DCF的可用性与性能，便于后期和其他的分布式项目对接。
-
-![DCF-Demo在GitHub上的仓库](./imgs/Figure2.png)
+&#160; &#160; &#160; &#160; CFTest基于GitHub上的项目DCF-Demo，作者是我的师兄。我们希望通过设计DCF测试程序来验证DCF的可用性与性能，便于后期和其他的分布式项目对接。
 
 DCF-Demo项目地址：https://github.com/NPUWDBLab/DCF-Demo
 
