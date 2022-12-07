@@ -1,5 +1,5 @@
-# DCFTest: Distributed Consensus Framework 的测试程序
-&#160; &#160; &#160; &#160; CFTest基于GitHub上的项目DCF-Demo（v1），该项目的作者叶神是我的师兄，我们设计的初衷是希望通过设计测试程序来验证DCF的可用性与性能，在验证DCF框架的可用性后，也便于后期和其他的分布式项目对接。
+# DCFTest: DCF框架的测试程序
+&#160; &#160; &#160; &#160; CFTest基于GitHub上的项目DCF-Demo（v1），作者是我的师兄叶神。我们希望通过设计DCF测试程序来验证DCF的可用性与性能，便于后期和其他的分布式项目对接。
 
 ![DCF-Demo在GitHub上的仓库](./imgs/Figure2.png)
 
@@ -8,17 +8,17 @@ DCF-Demo项目地址：https://github.com/NPUWDBLab/DCF-Demo
 DCFTest实现了基于DCF的下列测试情景:
  * **读写测试**: DCFTest在程序内部提供了交互窗口，允许用户通过FCFTest所支持的读写指令对DCF进行读写数据。在不同的集群情境下，测试跨可用区的多副本复制。
  * **集群故障测试**: DCF作为稳定可靠的一致性数据复制组件，为了测试DCF在任何条件下的可用性，DCFTest提供了可以模拟多种集群故障情况的指令。通过不同的指令组合，用户可以测试DCF在节点宕机、网络分区等情况下的可用性情况。
- * **集群变更测试**: DCFTest提供指令可以组合，用以对容灾性自动与手动升降主备，集群状态查询，集群配置管理情景的测试。
+ * **集群变更测试**: DCFTest提供指令可以通过组合，实现集群节点与配置的动态变更。用以对容灾性自动与手动升降主备，集群状态查询，集群配置管理情景的测试。
 
 ---
 
-**1.外部依赖关系**  
+**1. 外部依赖关系**  
 
 &#160; &#160; &#160; &#160; 在运行DCFTest之前，需要确保安装配置好了下面列出的依赖项。
 * DCF 3.1.0 
 * gcc 4.8.5
 
-**2.设置**
+**2. 设置**
 
 * 将DCFTest安装到本地
 ```javascript
@@ -32,13 +32,13 @@ DCFTest实现了基于DCF的下列测试情景:
 ```
 * 设置环境变量，将LD_LIBRARY_PATH设置为DCF生成的lib库路径
 ```javascript
-set environment variable
+# set environment variable
 [lenyb@slave02 DCFTest]$ export LD_LIBRARY_PATH=//data/toolchain/lib::$LD_LIBRARY_PATH
 ```
 
-**3.运行**
+**3. 运行**
 
-**集群节点所在的服务器上均要安装配置DCFTest**
+**所有节点所在的服务器上均要配置DCFTest**
 * 运行build.sh以启动DCF
 ```javascript
 # run DCFTest
@@ -47,7 +47,7 @@ set environment variable
 
 ![DCF-Demo在GitHub上的仓库](./imgs/Figure3.png)
 
-**4.使用方法**
+**4. 使用方法**
 * 在终端交互窗口中输入指令
 * 如果提示PASSED，代表操作成功，如果提示FAILED，则代表操作失败
 * 输入错误的指令或输入空指令后，会对程序支持的指令进行提示
