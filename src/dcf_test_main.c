@@ -328,7 +328,7 @@ int main(int argc, char *argv[])
 
     // 启动DCF
     printf("\033[32m[ RUN--- ]\033[0m start DCF...\n");
-    printf("\033[32m[ ------ ]\033[0m dcf lib version: %s\r\n", dcf_get_version());
+    // printf("\033[32m[ ------ ]\033[0m dcf lib version: %s\r\n", dcf_get_version());
 
     if (dcf_start_config == NULL || writeContents == NULL)
     {
@@ -384,7 +384,7 @@ int main(int argc, char *argv[])
         else if (strcmp(input_buffer->buffer, "start") == 0)
         {
             printf("\033[32m[ RUN--- ]\033[0m start DCF...\n");
-            printf("\033[32m[ ------ ]\033[0m dcf lib version: %s\r\n", dcf_get_version());
+            // printf("\033[32m[ ------ ]\033[0m dcf lib version: %s\r\n", dcf_get_version());
 
             if (dcf_start_config == NULL || writeContents == NULL)
             {
@@ -425,14 +425,16 @@ int main(int argc, char *argv[])
             }
         }
 
-        // DCFTest > addnode
-        else if (strcmp(input_buffer->buffer, "addnode") == 0)
+        // DCFTest > add node
+        else if (strcmp(input_buffer->buffer, "add node") == 0)
         {
             unsigned int AddNode_id = 4;
             const char *Addip = "172.19.0.201";
             unsigned int Addport = 26222;
             dcf_role_t Addrole = 2; // Addrole is follower
             unsigned int wait_time = 200;
+            
+            // int dcf_add_member(unsigned int stream_id, unsigned int node_id, const char *ip, unsigned int port, dcf_role_t role, unsigned int wait_timeout_ms);
 
             int ret_dcf_add_member = dcf_add_member(1, AddNode_id, Addip, Addport, Addrole, wait_time);
             if (ret_dcf_add_member == -1)
@@ -445,8 +447,8 @@ int main(int argc, char *argv[])
             }
         }
 
-        // DCFTest > removenode
-        else if (strcmp(input_buffer->buffer, "removenode") == 0)
+        // DCFTest > remove node
+        else if (strcmp(input_buffer->buffer, "remove node") == 0)
         {
             unsigned int AddNode_id = 4;
             const char *Addip = "172.19.0.201";
@@ -517,7 +519,7 @@ int main(int argc, char *argv[])
             unsigned int length = 2048;
             if (dcf_query_cluster_info(query_buffer, length) == -1)
             {
-                printf("\033[33m[ WARNED ]\033[0m query cluster info failed.\n");
+                printf("\033[33m[ FAILED ]\033[0m query cluster info failed.\n");
             }
             else
             {
@@ -526,43 +528,140 @@ int main(int argc, char *argv[])
 
         }
 
-        // DCFTest > write
+        // DCFTest > write <w_data>
         else if (strncmp(input_buffer->buffer, "write", 5) == 0)
         {
             int arg_size = sscanf(input_buffer->buffer, "write %s", writeContents);
             if (arg_size < 1)
             {
-                printf("\033[33m[ WARNED ]\033[0m arg need write content.\n");
+                printf("\033[34m[ REMIND ]\033[0m usage: write <w_data>.\n");
+                printf("\033[34m[ REMIND ]\033[0m option:\n");
+                printf("\033[34m[ REMIND ]\033[0m     -w_data       write data.\n");
             }
-            DCFTest_write(isleader, input_buffer, writeContents, &writeIndex);
+            else
+            {
+                DCFTest_write(isleader, input_buffer, writeContents, &writeIndex);
+            }
         }
 
-        // DCFTest > read
+        // DCFTest > read <r_index>
         else if (strncmp(input_buffer->buffer, "read", 4) == 0)
         {
 
             int arg_size = sscanf(input_buffer->buffer, "read %ld", &readIndex);
             if (arg_size < 1)
             {
-                printf("\033[33m[ WARNED ]\033[0m arg need read index.\n");
+                printf("\033[34m[ REMIND ]\033[0m usage: read <r_index>.\n");
+                printf("\033[34m[ REMIND ]\033[0m option:\n");
+                printf("\033[34m[ REMIND ]\033[0m     -r_index       read index.\n");
             }
-            DCFTest_read(1, readIndex, readbuffer, 1024);
+            else
+            {
+                DCFTest_read(1, readIndex, readbuffer, 1024);
+            }
+        }
+        
+        // DCFTest > get error
+        else if (strcmp(input_buffer->buffer, "get error") == 0)
+        {
+            int errorno = dcf_get_errorno();
+            printf("\033[32m[ RUN--- ]\033[0m error code is %d.\n", errorno);
+            char errorinfo[1024] = "";
+            printf("\033[32m[ PASSED ]\033[0m %s.\n", dcf_get_error(errorno));
+        }    
+
+        // DCFTest > get version
+        else if (strcmp(input_buffer->buffer, "get version") == 0)
+        {
+            printf("\033[32m[ PASSED ]\033[0m %s.\n", dcf_get_version());
+        }    
+
+        // DCFTest > change role <n_id> <n_role>
+        else if (strncmp(input_buffer->buffer, "change role", 11) == 0)
+        {   
+            // int dcf_change_member_role(unsigned int stream_id, unsigned int node_id, dcf_role_t new_role, unsigned int wait_timeout_ms);
+
+            unsigned int n_id = 0;
+            unsigned int n_role = 0;
+            int arg_size = sscanf(input_buffer->buffer, "change role %d %d", &n_id, &n_role);
+            if (arg_size < 2)
+            {
+                printf("\033[34m[ REMIND ]\033[0m usage: change role <n_id> <n_role>.\n");
+                printf("\033[34m[ REMIND ]\033[0m option:\n");
+                printf("\033[34m[ REMIND ]\033[0m     -n_id       node id.\n");
+                printf("\033[34m[ REMIND ]\033[0m     -n_role     node role (1:leader, 2:follower).\n");
+            }
+            else
+            {
+                if(dcf_change_member_role(1, n_id, n_role, 200) == 0)
+                {
+                    printf("\033[32m[ PASSED ]\033[0m change member role succeed.\n");
+                }
+                else
+                {
+                    printf("\033[31m[ FAILED ]\033[0m change member role failed.\n");
+                }
+            }
+        }
+
+        // DCFTest > promote leader <n_id>
+        else if (strncmp(input_buffer->buffer, "promote leader", 14) == 0)
+        {   
+            // int dcf_promote_leader(unsigned int stream_id, unsigned int node_id, unsigned int wait_timeout_ms);
+
+            unsigned int n_id = 0;
+            int arg_size = sscanf(input_buffer->buffer, "promote leader %d", &n_id);
+            if (arg_size < 1)
+            {
+                printf("\033[34m[ REMIND ]\033[0m usage: promote leader <n_id>.\n");
+                printf("\033[34m[ REMIND ]\033[0m option:\n");
+                printf("\033[34m[ REMIND ]\033[0m     -n_id       node id.\n");
+            }
+            else
+            {
+                if(dcf_promote_leader(1, n_id, 200) == 0)
+                {
+                    printf("\033[32m[ PASSED ]\033[0m promote leader succeed.\n");
+                }
+                else
+                {
+                    printf("\033[31m[ FAILED ]\033[0m promote leader failed.\n");
+                }
+            }
+        }
+
+        // DCFTest > demote follower
+        else if (strcmp(input_buffer->buffer, "demote follower") == 0)
+        {   
+            // int dcf_demote_follower(unsigned int stream_id);
+
+            if(dcf_demote_follower(1) == 0)
+            {
+                printf("\033[32m[ PASSED ]\033[0m demote follower succeed.\n");
+            }
+            else
+            {
+                printf("\033[31m[ FAILED ]\033[0m demote follower failed.\n");
+            }
         }
 
         // DCFTest > other case
         else
         {
-            printf("\033[31m[ FAILED ]\033[0m the instruction is unexpected.\n");
             printf("\033[34m[ REMIND ]\033[0m do you want to input ?\n");
-            printf("\033[34m[ REMIND ]\033[0m -start            start local DCF node.\n");
-            printf("\033[34m[ REMIND ]\033[0m -stop             stop local DCF node.\n");
-            printf("\033[34m[ REMIND ]\033[0m -addnode          add DCF node to cluster.\n");
-            printf("\033[34m[ REMIND ]\033[0m -removenode       remove DCF node from cluster.\n");
-            printf("\033[34m[ REMIND ]\033[0m -index            get index information.\n");
-            printf("\033[34m[ REMIND ]\033[0m -query            query cluster information.\n");
-            printf("\033[34m[ REMIND ]\033[0m -write <w_data>   write w_data to file.\n");
-            printf("\033[34m[ REMIND ]\033[0m -read <r_index>   read data from r_index.\n");
-            printf("\033[34m[ REMIND ]\033[0m -exit             exit DCFTest.\n");
+            printf("\033[34m[ REMIND ]\033[0m start             start local DCF node.\n");
+            printf("\033[34m[ REMIND ]\033[0m stop              stop local DCF node.\n");
+            printf("\033[34m[ REMIND ]\033[0m add node          add DCF node to cluster.\n");
+            printf("\033[34m[ REMIND ]\033[0m remove node       remove DCF node from cluster.\n");
+            printf("\033[34m[ REMIND ]\033[0m index             get index information.\n");
+            printf("\033[34m[ REMIND ]\033[0m query             query cluster information.\n");
+            printf("\033[34m[ REMIND ]\033[0m write             write w_data to file.\n");
+            printf("\033[34m[ REMIND ]\033[0m read              read data from r_index.\n");
+            printf("\033[34m[ REMIND ]\033[0m get version       get dcf version information.\n");
+            printf("\033[34m[ REMIND ]\033[0m change role       change node role.\n");
+            printf("\033[34m[ REMIND ]\033[0m promote leader    promote follower to leader.\n");
+            printf("\033[34m[ REMIND ]\033[0m demote follower   promote leader to follower.\n");
+            printf("\033[34m[ REMIND ]\033[0m exit              exit DCFTest.\n");
         }
 
         // log truncate
