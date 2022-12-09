@@ -3,14 +3,35 @@
 
 DCF-Demo项目地址：https://github.com/NPUWDBLab/DCF-Demo
 
-DCFTest希望能够通过DCF-Demo中的代码来进行测试，所以首要工作是从DCF-Demo中将部分代码段提取出来。具体的做法是将dcf_test_main.c中的部分代码封装到dcf_test.h当中，供DCFTest调用。
-
-![DCF-Test与DCF-Demo间的联系](./imgs/Figure1.png)
-
 DCFTest实现了基于DCF的下列测试情景:
  * **集群选举测试**: DCFTest可以通过指令组合，实现集群节点与配置的动态变更。用以对容灾性自动与手动升降主备，集群状态查询，集群配置管理情景的测试。
  * **日志复制测试**: DCFTest在程序内部提供了交互窗口，允许用户通过FCFTest所支持的读写指令对DCF进行读写数据。在不同的集群情境下，测试跨可用区的多副本复制。
  * **集群故障测试**: DCF作为稳定可靠的一致性数据复制组件，为了测试DCF在任何条件下的可用性，DCFTest提供了可以模拟多种集群故障情况的指令。通过不同的指令组合，用户可以测试DCF在节点宕机、网络分区等情况下的可用性情况。
+
+---
+
+## 0. 准备工作
+
+&#160; &#160; &#160; &#160; DCFTest希望能够通过DCF-Demo中的代码来进行测试，所以首要工作是从DCF-Demo中将部分代码段提取出来。具体的做法是将dcf_test_main.c中的部分代码封装到dcf_demo.h当中，供DCFTest调用。
+
+![DCF-Test与DCF-Demo间的联系](./imgs/Figure1.png)
+
+目前封装已封装在dcf_demo.h中的函数如下：
+
+```c
+void readCommand(inputBuffer*);
+void Print_REPL();
+void Print_Prompt();
+int DCFTest_exit();
+int DCFTest_set_param(int);
+void DCFTest_write(bool, inputBuffer*, char*, unsigned long long*);
+void DCFTest_read(unsigned int, unsigned long long, char*, unsigned int);
+int DCFTest_start(int, char*);
+int DCFTest_add_node(unsigned int, char*, unsigned int);
+int DCFTest_remove_node(int);
+void DCFTest_index(int);
+void DCFTest_query();
+```
 
 ---
 
@@ -59,5 +80,5 @@ DCFTest实现了基于DCF的下列测试情景:
 
 ## 5. 测试
 
-&#160; &#160; &#160; &#160; 详细的测试过程将在<a href="https://lamber1123.github.io/2022/12/07/DCFTest%EF%BC%9ADCF%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E7%9A%84%E8%AE%BE%E8%AE%A1/">《DCFTest：DCF测试框架的设计》</a>中记录。
+&#160; &#160; &#160; &#160; 详细的测试过程将在<a href="https://lamber1123.github.io/2022/12/07/DCFTest%EF%BC%9ADCF%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E7%9A%84%E8%AE%BE%E8%AE%A1/">《DCFTest：DCF测试框架的测试》</a>中记录。
 

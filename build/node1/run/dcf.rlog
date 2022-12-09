@@ -166,3 +166,270 @@ UTC+8 2022-12-09 22:25:42.601|DCF|64106|INFO>[ELC]receive ack from node_id=3, st
 UTC+8 2022-12-09 22:25:43.274|DCF|64097|INFO>[ELC]update node role ok. default_role=1, role=1.
 UTC+8 2022-12-09 22:25:43.274|DCF|64097|INFO>[ELC]update node group ok. new_group=0.
 UTC+8 2022-12-09 22:25:43.274|DCF|64097|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:58.348|DCF|69282|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-09 23:24:58.348|DCF|69282|INFO>[LOG] file './node1/run/dcf.rlog' is added
+UTC+8 2022-12-09 23:24:58.348|DCF|69282|INFO>[LOG] file './node1/debug/dcf.dlog' is added
+UTC+8 2022-12-09 23:24:58.348|DCF|69282|INFO>[LOG] file './node1/oper/oper.log' is added
+UTC+8 2022-12-09 23:24:58.351|DCF|69282|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-09 23:24:58.351|DCF|69284|INFO>[MEC]reactor thread started
+UTC+8 2022-12-09 23:24:58.351|DCF|69282|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-09 23:24:58.351|DCF|69285|INFO>[MEC]reactor thread started
+UTC+8 2022-12-09 23:24:58.351|DCF|69282|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-09 23:24:58.352|DCF|69282|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-09 23:24:58.352|DCF|69287|INFO>[MEC]agent thread started, tid:139733478045440, close:0
+UTC+8 2022-12-09 23:24:58.352|DCF|69282|INFO>[MEC]connect to instance 2 channel id 0.
+UTC+8 2022-12-09 23:24:58.352|DCF|69288|INFO>[MEC]agent thread started, tid:139733476992768, close:0
+UTC+8 2022-12-09 23:24:58.352|DCF|69289|INFO>[MEC]agent thread started, tid:139733475940096, close:0
+UTC+8 2022-12-09 23:24:58.352|DCF|69287|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 29322.
+UTC+8 2022-12-09 23:24:58.352|DCF|69282|INFO>[MEC]connect to instance 3 channel id 0.
+UTC+8 2022-12-09 23:24:58.352|DCF|69290|INFO>[MEC]agent thread started, tid:139733474887424, close:0
+UTC+8 2022-12-09 23:24:58.352|DCF|69288|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 29322.
+UTC+8 2022-12-09 23:24:58.353|DCF|69282|INFO>[MEC]Mec init succeed
+UTC+8 2022-12-09 23:24:58.353|DCF|69289|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 29322.
+UTC+8 2022-12-09 23:24:58.353|DCF|69290|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 29322.
+UTC+8 2022-12-09 23:24:58.353|DCF|69287|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:24:58.353|DCF|69287|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
+UTC+8 2022-12-09 23:24:58.353|DCF|69287|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
+UTC+8 2022-12-09 23:24:58.353|DCF|69289|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:24:58.353|DCF|69289|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 0.
+UTC+8 2022-12-09 23:24:58.353|DCF|69289|INFO>[MEC]connect to instance 3 channel id 0, priv 0 success.
+UTC+8 2022-12-09 23:24:58.353|DCF|69288|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:24:58.353|DCF|69288|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
+UTC+8 2022-12-09 23:24:58.353|DCF|69290|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:24:58.353|DCF|69288|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
+UTC+8 2022-12-09 23:24:58.353|DCF|69290|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 1.
+UTC+8 2022-12-09 23:24:58.354|DCF|69290|INFO>[MEC]connect to instance 3 channel id 0, priv 1 success.
+UTC+8 2022-12-09 23:24:58.373|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:24:58.373|DCF|69286|INFO>[MEC]mec_accept: channel id 768 priv 0 receive ok.
+UTC+8 2022-12-09 23:24:58.373|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:24:58.373|DCF|69286|INFO>[MEC]mec_accept: channel id 768 priv 1 receive ok.
+UTC+8 2022-12-09 23:24:58.384|DCF|69282|INFO>[STG]Stg init succeed
+UTC+8 2022-12-09 23:24:58.384|DCF|69282|INFO>[ELC]stream 1 init, cur_node_id 1, vote_for 1, last_hb_time 0
+UTC+8 2022-12-09 23:24:58.384|DCF|69282|INFO>[ELC]elc_status_check_init ok.
+UTC+8 2022-12-09 23:24:58.384|DCF|69282|INFO>[ELC]Elc init succeed
+UTC+8 2022-12-09 23:24:58.385|DCF|69298|INFO>[LOG] file './node1/profile/dcf.plog' is added
+UTC+8 2022-12-09 23:24:58.385|DCF|69295|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-09 23:24:58.385|DCF|69282|INFO>rep_leader_init: flow_ctrl_type=1.
+UTC+8 2022-12-09 23:24:58.385|DCF|69282|INFO>[monitor]monitor init start.
+UTC+8 2022-12-09 23:24:58.385|DCF|69282|INFO>[monitor]dcf log path: ./node1
+UTC+8 2022-12-09 23:24:58.385|DCF|69282|INFO>[monitor]monitor init end.
+UTC+8 2022-12-09 23:24:58.385|DCF|69300|INFO>leader monitor thread start.
+UTC+8 2022-12-09 23:24:58.387|DCF|69295|INFO>[ELC]get vote from stream_id=1, node_id=1, term=8, vote_count=1
+UTC+8 2022-12-09 23:24:58.387|DCF|69295|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=8 last_log.term=8 last_log.index=20 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-09 23:24:58.387|DCF|69303|INFO>[MEC]work thread started, tid:139733079058176, close:0
+UTC+8 2022-12-09 23:24:58.387|DCF|69282|INFO>rep_leader_init finished
+UTC+8 2022-12-09 23:24:58.387|DCF|69282|INFO>[REP]rep_init succeed
+UTC+8 2022-12-09 23:24:58.387|DCF|69282|INFO>init exception report
+UTC+8 2022-12-09 23:24:58.387|DCF|69282|INFO>[DCF]Tool init succeed
+UTC+8 2022-12-09 23:24:58.387|DCF|69282|INFO>dcf start succeed.
+UTC+8 2022-12-09 23:24:58.389|DCF|69307|INFO>[MEC]work thread started, tid:139733074847488, close:0
+UTC+8 2022-12-09 23:24:58.389|DCF|69307|INFO>[ELC]receive ack from node_id=3, stream_id=1, current_node=1, current_term=8, role=5, work_mode=0 peer_term=9, vote_granted=0 work_mode=0
+UTC+8 2022-12-09 23:24:58.389|DCF|69307|INFO>[ELC]no vote been obtained, stream_id=1, node_id=1, current_term=8, peer_node=3, peer_term=9
+UTC+8 2022-12-09 23:24:58.392|DCF|69307|INFO>[ELC]get vote no from stream_id=1, node_id=3, term=9, vote_no_count=1
+UTC+8 2022-12-09 23:24:58.396|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:24:58.397|DCF|69286|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
+UTC+8 2022-12-09 23:24:58.397|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:24:58.397|DCF|69286|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
+UTC+8 2022-12-09 23:24:58.529|DCF|69308|INFO>[MEC]work thread started, tid:139733073794816, close:0
+UTC+8 2022-12-09 23:24:58.754|DCF|69309|INFO>[MEC]work thread started, tid:139733072742144, close:0
+UTC+8 2022-12-09 23:24:58.787|DCF|69295|WARN>[ELC]heartbeat timeout, begin voting, stream_id=1, node_id=1
+UTC+8 2022-12-09 23:24:58.793|DCF|69295|INFO>[ELC]get vote from stream_id=1, node_id=1, term=9, vote_count=1
+UTC+8 2022-12-09 23:24:58.793|DCF|69295|INFO>[ELC]elc vote req broadcast, stream_id=1 candidate_id=1 candidate_term=9 last_log.term=8 last_log.index=20 vote_flag=0x1 work_mode=0
+UTC+8 2022-12-09 23:24:58.794|DCF|69307|INFO>[ELC]receive ack from node_id=3, stream_id=1, current_node=1, current_term=9, role=5, work_mode=0 peer_term=9, vote_granted=0 work_mode=0
+UTC+8 2022-12-09 23:24:58.794|DCF|69307|INFO>[ELC]no vote been obtained, stream_id=1, node_id=1, current_term=9, peer_node=3, peer_term=9
+UTC+8 2022-12-09 23:24:58.794|DCF|69307|INFO>[ELC]get vote no from stream_id=1, node_id=3, term=9, vote_no_count=1
+UTC+8 2022-12-09 23:24:58.794|DCF|69307|INFO>[ELC]receive ack from node_id=2, stream_id=1, current_node=1, current_term=9, role=5, work_mode=0 peer_term=9, vote_granted=0 work_mode=0
+UTC+8 2022-12-09 23:24:58.794|DCF|69307|INFO>[ELC]no vote been obtained, stream_id=1, node_id=1, current_term=9, peer_node=2, peer_term=9
+UTC+8 2022-12-09 23:24:58.794|DCF|69307|INFO>[ELC]get vote no from stream_id=1, node_id=2, term=9, vote_no_count=2
+UTC+8 2022-12-09 23:24:58.828|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.828|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.828|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:24:58.828|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:24:58.829|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>LOG_SUPPRESS_BEGIN>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=5.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:24:58.830|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:24:59.093|DCF|69295|INFO>[ELC]election timeout, become follower, stream_id=1, node_id=1
+UTC+8 2022-12-09 23:24:59.141|DCF|69307|INFO>[ELC]receive new leader's heartbeat, stream_id=1, node_id=1, leader_id=3
+UTC+8 2022-12-09 23:24:59.354|DCF|69324|INFO>[MEC]work thread started, tid:139733071689472, close:0
+UTC+8 2022-12-09 23:24:59.354|DCF|69325|INFO>[MEC]work thread started, tid:139732887099136, close:0
+UTC+8 2022-12-09 23:27:25.337|DCF|69307|INFO>[ELC]Send response to node_id=2, stream_id=1, current_node=1, current_term=9, vote_granted=1, work_mode=0
+UTC+8 2022-12-09 23:27:25.358|DCF|69307|INFO>[ELC]Send response to node_id=2, stream_id=1, current_node=1, current_term=10, vote_granted=1, work_mode=0
+UTC+8 2022-12-09 23:27:27.094|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:27:27.094|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:27:27.094|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:28:58.123|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:28:58.124|DCF|69286|ERROR>[MEC]cs_read_bytes failed.
+UTC+8 2022-12-09 23:28:58.124|DCF|69286|ERROR>[MEC]init pipe failed.
+UTC+8 2022-12-09 23:28:58.220|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:28:58.220|DCF|69286|INFO>[MEC]mec_accept: channel id 768 priv 0 receive ok.
+UTC+8 2022-12-09 23:28:58.220|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:28:58.221|DCF|69286|INFO>[MEC]mec_accept: channel id 768 priv 1 receive ok.
+UTC+8 2022-12-09 23:28:58.232|DCF|69290|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 29322.
+UTC+8 2022-12-09 23:28:58.232|DCF|69287|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 29322.
+UTC+8 2022-12-09 23:28:58.232|DCF|69290|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:28:58.232|DCF|69290|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 1.
+UTC+8 2022-12-09 23:28:58.232|DCF|69290|INFO>[MEC]connect to instance 3 channel id 0, priv 1 success.
+UTC+8 2022-12-09 23:28:58.232|DCF|69287|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:28:58.233|DCF|69287|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 0.
+UTC+8 2022-12-09 23:28:58.233|DCF|69287|INFO>[MEC]connect to instance 3 channel id 0, priv 0 success.
+UTC+8 2022-12-09 23:29:24.883|DCF|69307|INFO>[ELC]Send response to node_id=3, stream_id=1, current_node=1, current_term=10, vote_granted=1, work_mode=0
+UTC+8 2022-12-09 23:29:24.906|DCF|69307|INFO>[ELC]Send response to node_id=3, stream_id=1, current_node=1, current_term=11, vote_granted=1, work_mode=0
+UTC+8 2022-12-09 23:29:26.248|DCF|69298|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:29:26.248|DCF|69298|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:29:26.248|DCF|69298|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:30:15.319|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:30:15.319|DCF|69286|ERROR>[MEC]cs_read_bytes failed.
+UTC+8 2022-12-09 23:30:15.319|DCF|69286|ERROR>[MEC]init pipe failed.
+UTC+8 2022-12-09 23:30:15.367|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:30:15.368|DCF|69286|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
+UTC+8 2022-12-09 23:30:15.368|DCF|69286|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:30:15.368|DCF|69286|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
+UTC+8 2022-12-09 23:30:15.373|DCF|69289|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 29322.
+UTC+8 2022-12-09 23:30:15.373|DCF|69288|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 29322.
+UTC+8 2022-12-09 23:30:15.373|DCF|69289|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:30:15.373|DCF|69289|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
+UTC+8 2022-12-09 23:30:15.374|DCF|69289|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
+UTC+8 2022-12-09 23:30:15.374|DCF|69288|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:30:15.374|DCF|69288|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
+UTC+8 2022-12-09 23:30:15.374|DCF|69288|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
+UTC+8 2022-12-09 23:33:48.558|DCF|69295|INFO>no need to check timeout, now:5649868656116, last_hb_time:5649868656133
+UTC+8 2022-12-09 23:37:13.305|DCF|69961|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-09 23:37:13.305|DCF|69961|INFO>[LOG] file './node1/run/dcf.rlog' is added
+UTC+8 2022-12-09 23:37:13.306|DCF|69961|INFO>[LOG] file './node1/debug/dcf.dlog' is added
+UTC+8 2022-12-09 23:37:13.306|DCF|69961|INFO>[LOG] file './node1/oper/oper.log' is added
+UTC+8 2022-12-09 23:37:13.308|DCF|69961|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-09 23:37:13.308|DCF|69963|INFO>[MEC]reactor thread started
+UTC+8 2022-12-09 23:37:13.308|DCF|69961|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-09 23:37:13.308|DCF|69964|INFO>[MEC]reactor thread started
+UTC+8 2022-12-09 23:37:13.308|DCF|69961|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-09 23:37:13.308|DCF|69961|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-09 23:37:13.309|DCF|69966|INFO>[MEC]agent thread started, tid:139917270513408, close:0
+UTC+8 2022-12-09 23:37:13.309|DCF|69961|INFO>[MEC]connect to instance 2 channel id 0.
+UTC+8 2022-12-09 23:37:13.309|DCF|69967|INFO>[MEC]agent thread started, tid:139917269460736, close:0
+UTC+8 2022-12-09 23:37:13.309|DCF|69968|INFO>[MEC]agent thread started, tid:139917268408064, close:0
+UTC+8 2022-12-09 23:37:13.309|DCF|69966|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 29322.
+UTC+8 2022-12-09 23:37:13.309|DCF|69961|INFO>[MEC]connect to instance 3 channel id 0.
+UTC+8 2022-12-09 23:37:13.309|DCF|69969|INFO>[MEC]agent thread started, tid:139917267355392, close:0
+UTC+8 2022-12-09 23:37:13.309|DCF|69967|INFO>[MEC]after cs_tcp_connect to host 172.19.0.203 port 29322.
+UTC+8 2022-12-09 23:37:13.309|DCF|69961|INFO>[MEC]Mec init succeed
+UTC+8 2022-12-09 23:37:13.309|DCF|69966|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:37:13.309|DCF|69966|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 0.
+UTC+8 2022-12-09 23:37:13.309|DCF|69968|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 29322.
+UTC+8 2022-12-09 23:37:13.310|DCF|69966|INFO>[MEC]connect to instance 2 channel id 0, priv 0 success.
+UTC+8 2022-12-09 23:37:13.310|DCF|69969|INFO>[MEC]after cs_tcp_connect to host 172.19.0.204 port 29322.
+UTC+8 2022-12-09 23:37:13.310|DCF|69968|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:37:13.310|DCF|69967|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:37:13.310|DCF|69968|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 0.
+UTC+8 2022-12-09 23:37:13.310|DCF|69971|INFO>[MEC]work thread started, tid:139917229590272, close:0
+UTC+8 2022-12-09 23:37:13.310|DCF|69967|INFO>[MEC]after cs_connect to instance 2 channel id 0, priv 1.
+UTC+8 2022-12-09 23:37:13.310|DCF|69968|INFO>[MEC]connect to instance 3 channel id 0, priv 0 success.
+UTC+8 2022-12-09 23:37:13.310|DCF|69967|INFO>[MEC]connect to instance 2 channel id 0, priv 1 success.
+UTC+8 2022-12-09 23:37:13.310|DCF|69969|INFO>[MEC]cs_open_tcp_link success.
+UTC+8 2022-12-09 23:37:13.310|DCF|69969|INFO>[MEC]after cs_connect to instance 3 channel id 0, priv 1.
+UTC+8 2022-12-09 23:37:13.310|DCF|69969|INFO>[MEC]connect to instance 3 channel id 0, priv 1 success.
+UTC+8 2022-12-09 23:37:13.324|DCF|69965|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:37:13.324|DCF|69965|INFO>[MEC]mec_accept: channel id 512 priv 1 receive ok.
+UTC+8 2022-12-09 23:37:13.326|DCF|69965|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:37:13.327|DCF|69965|INFO>[MEC]mec_accept: channel id 512 priv 0 receive ok.
+UTC+8 2022-12-09 23:37:13.341|DCF|69961|INFO>[STG]Stg init succeed
+UTC+8 2022-12-09 23:37:13.341|DCF|69961|INFO>[ELC]stream 1 init, cur_node_id 1, vote_for 3, last_hb_time 5650133438348
+UTC+8 2022-12-09 23:37:13.341|DCF|69961|INFO>[ELC]elc_status_check_init ok.
+UTC+8 2022-12-09 23:37:13.341|DCF|69961|INFO>[ELC]Elc init succeed
+UTC+8 2022-12-09 23:37:13.341|DCF|69975|INFO>no need to check timeout, now:5650073438775, last_hb_time:5650133438348
+UTC+8 2022-12-09 23:37:13.341|DCF|69965|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:37:13.341|DCF|69961|INFO>rep_leader_init: flow_ctrl_type=1.
+UTC+8 2022-12-09 23:37:13.341|DCF|69961|INFO>[monitor]monitor init start.
+UTC+8 2022-12-09 23:37:13.341|DCF|69961|INFO>[monitor]dcf log path: ./node1
+UTC+8 2022-12-09 23:37:13.341|DCF|69961|INFO>[monitor]monitor init end.
+UTC+8 2022-12-09 23:37:13.341|DCF|69978|INFO>[LOG] file './node1/profile/dcf.plog' is added
+UTC+8 2022-12-09 23:37:13.342|DCF|69980|INFO>leader monitor thread start.
+UTC+8 2022-12-09 23:37:13.342|DCF|69981|INFO>[MEC]work thread started, tid:139916698523392, close:0
+UTC+8 2022-12-09 23:37:13.342|DCF|69961|INFO>rep_leader_init finished
+UTC+8 2022-12-09 23:37:13.342|DCF|69965|INFO>[MEC]mec_accept: channel id 768 priv 1 receive ok.
+UTC+8 2022-12-09 23:37:13.342|DCF|69961|INFO>[REP]rep_init succeed
+UTC+8 2022-12-09 23:37:13.342|DCF|69965|INFO>[MEC]mec_accept: received req, start accept...
+UTC+8 2022-12-09 23:37:13.342|DCF|69961|INFO>init exception report
+UTC+8 2022-12-09 23:37:13.342|DCF|69961|INFO>[DCF]Tool init succeed
+UTC+8 2022-12-09 23:37:13.342|DCF|69961|INFO>dcf start succeed.
+UTC+8 2022-12-09 23:37:13.342|DCF|69965|INFO>[MEC]mec_accept: channel id 768 priv 0 receive ok.
+UTC+8 2022-12-09 23:37:13.441|DCF|69975|INFO>no need to check timeout, now:5650073538961, last_hb_time:5650133438348
+UTC+8 2022-12-09 23:37:13.485|DCF|69987|INFO>[MEC]work thread started, tid:139916691154688, close:0
+UTC+8 2022-12-09 23:37:13.485|DCF|69988|INFO>[MEC]work thread started, tid:139916685768448, close:0
+UTC+8 2022-12-09 23:37:13.541|DCF|69975|INFO>no need to check timeout, now:5650073639079, last_hb_time:5650133438348
+UTC+8 2022-12-09 23:37:13.622|DCF|69989|INFO>[MEC]work thread started, tid:139916579170048, close:0
+UTC+8 2022-12-09 23:37:13.641|DCF|69975|INFO>no need to check timeout, now:5650073739190, last_hb_time:5650133438348
+UTC+8 2022-12-09 23:37:13.742|DCF|69975|INFO>no need to check timeout, now:5650073839296, last_hb_time:5650133438348
+UTC+8 2022-12-09 23:37:14.133|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.133|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.133|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.133|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.133|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.133|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>LOG_SUPPRESS_BEGIN>[MEC]update profile inst ok. old_node_count=3, inst_count=3.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.134|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>LOG_SUPPRESS_BEGIN>[ELC]update node role ok. default_role=1, role=2.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node group ok. new_group=0.
+UTC+8 2022-12-09 23:37:14.135|DCF|69978|INFO>[ELC]update node priority ok. new_priority=0.
+UTC+8 2022-12-09 23:37:14.311|DCF|70000|INFO>[MEC]work thread started, tid:139916578117376, close:0
+UTC+8 2022-12-09 23:42:37.642|DCF|69975|INFO>[LOG] file './node1/debug/dcf_20221209234237642.dlog' is added
+UTC+8 2022-12-09 23:42:37.642|DCF|69975|INFO>[LOG] file './node1/debug/dcf.dlog' is added
