@@ -1,7 +1,11 @@
 # DCFTest: 分布式一致性框架的测试工具
-&#160; &#160; &#160; &#160; CFTest基于GitHub上的项目DCF-Demo，作者是我的师兄。我们希望通过设计DCF测试程序来验证DCF的可用性与性能，便于后期和其他的分布式项目对接。
+&#160; &#160; &#160; &#160; DCFTest基于GitHub上的项目DCF-Demo，希望通过设计DCF测试程序来验证DCF的可用性与性能，便于后期和其他的分布式项目对接。
 
 DCF-Demo项目地址：https://github.com/NPUWDBLab/DCF-Demo
+
+![DCF-Test与DCF-Demo间的联系](./imgs/Figure1.png)
+
+DCFTest希望能够通过DCF-Demo中的代码来进行测试，所以首要工作是从DCF-Demo中将部分代码段提取出来。具体的做法是将dcf_test_main.c中的部分代码封装到dcf_test.h当中，然后通过dcf
 
 DCFTest实现了基于DCF的下列测试情景:
  * **读写测试**: DCFTest在程序内部提供了交互窗口，允许用户通过FCFTest所支持的读写指令对DCF进行读写数据。在不同的集群情境下，测试跨可用区的多副本复制。
