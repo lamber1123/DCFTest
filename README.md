@@ -16,7 +16,7 @@ DCFTest实现了基于DCF的下列测试情景:
 
 ![DCF-Test与DCF-Demo间的联系](./imgs/Figure1.png)
 
-目前封装已封装在dcf_demo.h中的函数如下：
+目前已封装在dcf_demo.h中的函数如下：
 
 ```c
 void readCommand(inputBuffer*);
