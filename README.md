@@ -10,34 +10,15 @@ DCFTest实现了基于DCF的下列测试情景:
 
 ---
 
-## 0. 准备工作
+## 0. 前期工作
 
 &#160; &#160; &#160; &#160; DCFTest希望能够通过DCF-Demo中的代码来进行测试，所以首要工作是从DCF-Demo中将部分代码段提取出来。具体的做法是将dcf_test_main.c中的部分代码封装到dcf_demo.h当中，供DCFTest调用。
 
 ![DCF-Test与DCF-Demo间的联系](./imgs/Figure1.png)
 
-目前已封装在dcf_demo.h中的函数如下：
-
-```c
-void readCommand(inputBuffer*);
-void Print_REPL();
-void Print_Prompt();
-int DCFTest_exit();
-int DCFTest_set_param(int);
-void DCFTest_write(bool, inputBuffer*, char*, unsigned long long*);
-void DCFTest_read(unsigned int, unsigned long long, char*, unsigned int);
-int DCFTest_start(int, char*);
-int DCFTest_add_node(unsigned int, char*, unsigned int);
-int DCFTest_remove_node(int);
-void DCFTest_index(int);
-void DCFTest_query();
-```
-
----
-
 ## 1. 外部依赖关系
 
-&#160; &#160; &#160; &#160; 在运行DCFTest之前，需要确保安装配置好了下面列出的依赖项。
+在运行DCFTest之前，需要确保安装配置好了下面列出的依赖项。
 * DCF 3.1.0 
 * gcc 4.8.5
 
