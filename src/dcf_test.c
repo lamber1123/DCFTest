@@ -45,6 +45,9 @@ static inline void cm_sleep(int ms)
 }
 #endif
 
+#define PASSED 0
+#define FAILED -1
+
 #ifndef _WIN32
 static void sig_proc(int signal)
 {
@@ -70,6 +73,7 @@ inputBuffer *newInputBuffer()
 
     return buf;
 }
+
 void readCommand(inputBuffer *buf)
 {
     ssize_t byteRead = getline(&(buf->buffer), &(buf->bufferLength), stdin);
@@ -106,19 +110,16 @@ int usr_cb_consensus_notify(unsigned int stream_id, unsigned long long index,
 {
     return dcf_set_applied_index(stream_id, index);
 }
-void DCFTest_exit(inputBuffer *buf)
-{
-    free(buf);
 
-    if (dcf_stop() == 0)
+int DCFTest_exit()
+{
+    if (dcf_stop() != 0)
     {
-        printf("\033[32m[ PASSED ]\033[0m Dcf Stop succeed.\n\n");
-        exit(EXIT_SUCCESS);
+        return FAILED;
     }
-    else
-    {
-        printf("\033[31m[ FAILED ]\033[0m Dcf stop failed.\n\n");
-    }
+    
+    exit(EXIT_SUCCESS);
+    return PASSED;
 }
 
 int usr_cb_status_changed_notify(unsigned int stream_id, dcf_role_t new_role)
@@ -132,7 +133,7 @@ void Read_Dcf_start_Config(char *config)
     int fd = open("../DCFTestConfig.json", O_RDONLY);
     if (fd == -1)
     {
-        printf("can not open the DcfFrameworkConfig.json file.\n");
+        printf("can not open the DCFTestConfig.json file.\n");
         exit(EXIT_FAILURE);
     }
     int len = read(fd, config, 1024);
@@ -144,7 +145,7 @@ void Read_Dcf_start_Config(char *config)
     close(fd);
 }
 
-int Dcf_Set_Param(int node_id)
+int DCFTest_set_param(int node_id)
 {
     int ret = 0;
     if (node_id == 1)
@@ -213,7 +214,7 @@ void DCFTest_write(bool isleader, inputBuffer *input_buffer, char *writeContents
         }
         else
         {
-            printf("\033[32m[ PASSED ]\033[0m dcf write succeed,size=%d,index =%d.\n", input_buffer->inputLength, *writeIndex);
+            printf("\033[32m[ PASSED ]\033[0m dcf write succeed,size=%d, index =%d.\n", input_buffer->inputLength, *writeIndex);
         }
     }
     else
@@ -241,21 +242,28 @@ void DCFTest_read(unsigned int streamId, unsigned long long ReadIndex, char *Rea
     }
 }
 
-int DCFTest_start(int node_id, inputBuffer *input_buffer, char *dcf_start_config, char *writeContents)
+int DCFTest_start(int node_id, char *dcf_start_config)
 {
     char printlog[1024] = "";
     int ret = 0;
 
+    if (dcf_start_config == NULL)
+    {
+        // printf("\033[31m[ FAILED ]\033[0m allocate memory failed.\n");
+        strcat(printlog, "\033[31m[ FAILED ]\033[0m allocate memory failed.\n");
+        printf("%s", printlog);
+        return FAILED;
+    }
+
+    Read_Dcf_start_Config(dcf_start_config);
+
     // 设置DCF参数
-    if (Dcf_Set_Param(node_id) != 0)
+    if (DCFTest_set_param(node_id) != 0)
     {
         // printf("\033[31m[ FAILED ]\033[0m set param LOG_LEVEL failed.\n");
         strcat(printlog, "\033[31m[ FAILED ]\033[0m set param LOG_LEVEL failed.\n");
-    }
-    else
-    {
-        // printf("\033[32m[ ------ ]\033[0m set param LOG_LEVEL succeeded.\n");
-        strcat(printlog, "\033[32m[ ------ ]\033[0m set param LOG_LEVEL succeeded.\n");
+        printf("%s", printlog);
+        return FAILED;
     }
 
     // 注册回调函数
@@ -263,21 +271,22 @@ int DCFTest_start(int node_id, inputBuffer *input_buffer, char *dcf_start_config
     {
         // printf("\033[31m[ FAILED ]\033[0m dcf_register_after_writer failed.\n");
         strcat(printlog, "\033[31m[ FAILED ]\033[0m dcf_register_after_writer failed.\n");
+        printf("%s", printlog);
+        return FAILED;
     }
-    else if (dcf_register_consensus_notify(usr_cb_consensus_notify) != 0)
+    if (dcf_register_consensus_notify(usr_cb_consensus_notify) != 0)
     {
         // printf("\033[31m[ FAILED ]\033[0m dcf_register_consensus_notify failed.\n");
         strcat(printlog, "\033[31m[ FAILED ]\033[0m dcf_register_consensus_notify failed.\n");
+        printf("%s", printlog);
+        return FAILED;
     }
-    else if (dcf_register_status_notify(usr_cb_status_changed_notify) != 0)
+    if (dcf_register_status_notify(usr_cb_status_changed_notify) != 0)
     {
         // printf("\033[31m[ FAILED ]\033[0m dcf_register_status_notify failed.\n");
         strcat(printlog, "\033[31m[ FAILED ]\033[0m dcf_register_status_notify failed.\n");
-    }
-    else
-    {
-        // printf("\033[32m[ ------ ]\033[0m dcf_register_status_notify succesed.\n");
-        strcat(printlog, "\033[32m[ ------ ]\033[0m dcf_register_status_notify succesed.\n");
+        printf("%s", printlog);
+        return FAILED;
     }
 
     // 启动DCF
@@ -292,18 +301,98 @@ int DCFTest_start(int node_id, inputBuffer *input_buffer, char *dcf_start_config
     {
         // printf("\033[31m[ FAILED ]\033[0m dcf start failed,node_id = %d.\n", node_id);
         char templog[128];
-        sprintf(templog, "\033[31m[ FAILED ]\033[0m dcf start failed,node_id = %d.\n", node_id);
+        sprintf(templog, "\033[31m[ FAILED ]\033[0m dcf start failed, node_id = %d.\n", node_id);
         strcat(printlog, templog);
-        ret = -1;
+        return FAILED;
     }
 
-    // 根据启动是否成功决定是否打印日志
-    if (ret == 0) printf("%s", printlog);
-
-    return ret;
-
+    printf("%s", printlog);
+    return PASSED;
 }
 
+int DCFTest_add_node(unsigned int AddNode_id, char* Addip, unsigned int Addport)
+{
+    dcf_role_t Addrole = 2; // Addrole is follower
+    unsigned int wait_time = 200;
+    
+    if (dcf_add_member(1, AddNode_id, Addip, Addport, Addrole, wait_time) == FAILED)
+    {
+        return FAILED;
+    }
+    
+    return PASSED;
+}
+
+int DCFTest_remove_node(int AddNode_id)
+{
+    unsigned int wait_time = 200;
+            
+    if (dcf_remove_member(1, AddNode_id, wait_time) == FAILED)
+    {
+        return FAILED;
+    }
+    
+    return PASSED;
+}
+
+void DCFTest_index(int node_id)
+{
+    unsigned long long leadlastindex = -1;
+    unsigned long long last_disk_index = -1;
+    unsigned long long data_last_commit_index = -1;
+    unsigned long long cluster_min_applied_idx = -1;
+
+    if (dcf_get_leader_last_index(1, &leadlastindex) == -1)
+    {
+        printf("\033[31m[ FAILED ]\033[0m get leader last index failed.\n");
+    }
+    else
+    {
+        printf("\033[32m[ ------ ]\033[0m the leader last index is %ld.\n", leadlastindex);
+    }
+
+    if (dcf_get_node_last_disk_index(1, node_id, &last_disk_index) == -1)
+    {
+        printf("\033[31m[ FAILED ]\033[0m get node last disk index failed.\n");
+    }
+    else
+    {
+        printf("\033[32m[ ------ ]\033[0m the node last disk index is %ld.\n", last_disk_index);
+    }
+
+    if (dcf_get_data_commit_index(1, node_id, &data_last_commit_index) == -1)
+    {
+        printf("\033[31m[ FAILED ]\033[0m get dcf data last commit index failed.\n");
+    }
+    else
+    {
+        printf("\033[32m[ ------ ]\033[0m the data last commit index is %ld.\n", data_last_commit_index);
+    }
+
+    if (dcf_get_cluster_min_applied_idx(1, &cluster_min_applied_idx) == -1)
+    {
+        printf("\033[31m[ FAILED ]\033[0m get cluster min applied index failed.\n");
+    }
+    else
+    {
+        printf("\033[32m[ PASSED ]\033[0m the cluster min applid index is %ld.\n", cluster_min_applied_idx);
+    }
+    
+}
+
+void DCFTest_query()
+{
+    char query_buffer[1024];
+    unsigned int length = 1024;
+    if (dcf_query_cluster_info(query_buffer, length) == -1)
+    {
+        printf("\033[33m[ FAILED ]\033[0m query cluster info failed.\n");
+    }
+    else
+    {
+        printf("\033[32m[ PASSED ]\033[0m cluster info: %s.\n", query_buffer);
+    }
+}
 
 int main(int argc, char *argv[])
 {
@@ -322,53 +411,36 @@ int main(int argc, char *argv[])
     Print_REPL();
 
     int node_id = 1;
-    // inputBuffer *input_buffer;
     char *dcf_start_config = (char *)malloc(1024);
-    char *writeContents = (char *)malloc(1024);
 
-    // 启动DCF
-    printf("\033[32m[ RUN--- ]\033[0m start DCF...\n");
-    // printf("\033[32m[ ------ ]\033[0m dcf lib version: %s\r\n", dcf_get_version());
-
-    if (dcf_start_config == NULL || writeContents == NULL)
-    {
-        printf("\033[31m[ FAILED ]\033[0m allocate memory failed.\n");
-    }
-    else
-    {
-        printf("\033[32m[ ------ ]\033[0m allocate memory succeed.\n");
-    }
-
-    Read_Dcf_start_Config(dcf_start_config);
-    inputBuffer *input_buffer = newInputBuffer();
+    // 尝试以1-5作为node_id启动DCF
     for (node_id = 1; node_id <= 5; node_id++)
     {
-        if (DCFTest_start(node_id, input_buffer, dcf_start_config, writeContents) == 0) 
+        if (DCFTest_start(node_id, dcf_start_config) == 0) 
         {
             break;
         }
 
         if (node_id == 5) 
         {
-            printf("\033[31m[ FAILED ]\033[0m start DCF failed, check node id.\n");
+            printf("\033[31m[ FAILED ]\033[0m failed to start with node_id 1 to 5.\n");
         }
     }
+    
     printf("\n");
+
+    char *writeContents = (char *)malloc(1024);
+    inputBuffer *input_buffer = newInputBuffer();
 
     long long count = 0;
     unsigned long long int writeIndex = 0;
     char readbuffer[2048];
-    unsigned long long lastindex = 10;
-    unsigned long long appliedindex = 10;
-    unsigned long long leadlastindex = 10;
-    unsigned long long last_disk_index = 0;
     unsigned long long readIndex = -1;
-    unsigned long long data_last_commit_index;
-    unsigned long long cluster_min_applied_idx;
 
     // DCFTest主循环
     do
     {
+        // DCFTest >
         Print_Prompt();
         readCommand(input_buffer);
         
@@ -377,155 +449,107 @@ int main(int argc, char *argv[])
         {
             free(dcf_start_config);
             free(writeContents);
-            DCFTest_exit(input_buffer);
-        }
+            free(input_buffer);
 
-        // DCFTest > start
-        else if (strcmp(input_buffer->buffer, "start") == 0)
-        {
-            printf("\033[32m[ RUN--- ]\033[0m start DCF...\n");
-            // printf("\033[32m[ ------ ]\033[0m dcf lib version: %s\r\n", dcf_get_version());
-
-            if (dcf_start_config == NULL || writeContents == NULL)
+            if (DCFTest_exit() == PASSED)
             {
-                printf("\033[31m[ FAILED ]\033[0m allocate memory failed.\n");
+                printf("\033[32m[ PASSED ]\033[0m Dcf Stop succeed.\n");
             }
             else
             {
-                printf("\033[32m[ ------ ]\033[0m allocate memory succeed.\n");
+                printf("\033[31m[ FAILED ]\033[0m Dcf stop failed.\n");
             }
+        }
 
-            Read_Dcf_start_Config(dcf_start_config);
-            
-            for (node_id = 1; node_id <= 5; node_id++)
+        // DCFTest > start
+        else if (strncmp(input_buffer->buffer, "start", 5) == 0)
+        {
+            dcf_stop() == 0;
+
+            int temp_id = -1;
+            int arg_size = sscanf(input_buffer->buffer, "start %d", &temp_id);
+
+            if (arg_size < 1) temp_id = node_id;
+            if (DCFTest_start(temp_id, dcf_start_config) == FAILED)
             {
-                if (DCFTest_start(node_id, input_buffer, dcf_start_config, writeContents) == 0) 
-                {
-                    break;
-                }
-
-                if (node_id == 5) 
-                {
-                    printf("\033[31m[ FAILED ]\033[0m start DCF failed, check node id.\n");
-                }
+                printf("\033[31m[ FAILED ]\033[0m stop DCF failed with node_id %d.\n", temp_id);
+            }
+            else
+            {
+                node_id = temp_id;
             }
         }
 
         // DCFTest > stop
         else if (strcmp(input_buffer->buffer, "stop") == 0)
         {
-            int ret_stop = dcf_stop();
-            if (ret_stop == 0)
-            {
-                printf("\033[32m[ PASSED ]\033[0m stop DCF succeed.\n");
-            }
-            else
-            {
-                printf("\033[31m[ FAILED ]\033[0m stop DCF failed.\n");
-            }
+            dcf_stop();
         }
 
         // DCFTest > add node
-        else if (strcmp(input_buffer->buffer, "add node") == 0)
+        else if (strncmp(input_buffer->buffer, "add node", 8) == 0)
         {
-            unsigned int AddNode_id = 4;
-            const char *Addip = "172.19.0.201";
-            unsigned int Addport = 26222;
-            dcf_role_t Addrole = 2; // Addrole is follower
-            unsigned int wait_time = 200;
-            
-            // int dcf_add_member(unsigned int stream_id, unsigned int node_id, const char *ip, unsigned int port, dcf_role_t role, unsigned int wait_timeout_ms);
+            unsigned int AddNode_id = -1;
+            char *Addip = (char *)malloc(128);
+            unsigned int Addport = -1;
 
-            int ret_dcf_add_member = dcf_add_member(1, AddNode_id, Addip, Addport, Addrole, wait_time);
-            if (ret_dcf_add_member == -1)
+            int arg_size = sscanf(input_buffer->buffer, "add node %d %s %d", &AddNode_id, Addip, &Addport);
+            if (arg_size < 3) 
             {
-                printf("\033[31m[ FAILED ]\033[0m add node failed.\n");
+                printf("\033[34m[ REMIND ]\033[0m usage: add node <a_id> <a_ip> <a_port>.\n");
+                printf("\033[34m[ REMIND ]\033[0m option:\n");
+                printf("\033[34m[ REMIND ]\033[0m     -a_id         add node id.\n");
+                printf("\033[34m[ REMIND ]\033[0m     -a_ip         add node ip.\n");
+                printf("\033[34m[ REMIND ]\033[0m     -a_port       add node port.\n");
             }
             else
             {
-                printf("\033[32m[ PASSED ]\033[0m add node succeed, node_id is %d, IP is %s, port is %d.\n", AddNode_id, Addip, Addport);
+                if (DCFTest_add_node(AddNode_id, Addip, Addport) == FAILED)
+                {
+                    printf("\033[31m[ FAILED ]\033[0m add node failed.\n");
+                }
+                else
+                {
+                    printf("\033[32m[ PASSED ]\033[0m add node succeed, node_id is %d, IP is %s, port is %d.\n", AddNode_id, Addip, Addport);
+                }
             }
         }
 
         // DCFTest > remove node
-        else if (strcmp(input_buffer->buffer, "remove node") == 0)
+        else if (strncmp(input_buffer->buffer, "remove node", 11) == 0)
         {
-            unsigned int AddNode_id = 4;
-            const char *Addip = "172.19.0.201";
-            unsigned int Addport = 20229;
-            dcf_role_t Addrole = 2; // Addrole is follower
-            unsigned int wait_time = 200;
+            unsigned int AddNode_id = -1;
 
-            int ret_dcf_remove_member = dcf_remove_member(1, AddNode_id,wait_time);
-            if (ret_dcf_remove_member == -1)
+            int arg_size = sscanf(input_buffer->buffer, "remove node %d", &AddNode_id);
+            if (arg_size < 1) 
             {
-                printf("\033[31m[ FAILED ]\033[0m remove node failed.\n");
+                printf("\033[34m[ REMIND ]\033[0m usage: remove node <a_id>.\n");
+                printf("\033[34m[ REMIND ]\033[0m option:\n");
+                printf("\033[34m[ REMIND ]\033[0m     -a_id         remove node id.\n");
             }
             else
             {
-                printf("\033[32m[ PASSED ]\033[0m remove node failed, node_id is %d, IP is %s, port is %d.\n", AddNode_id, Addip, Addport);
+                if (DCFTest_remove_node(AddNode_id) == FAILED)
+                {
+                    printf("\033[31m[ FAILED ]\033[0m remove node failed.\n");
+                }
+                else
+                {
+                    printf("\033[32m[ PASSED ]\033[0m remove node succeed, node_id is %d.\n", AddNode_id);
+                }
             }
         }
         
         // DCFTest > index
         else if (strcmp(input_buffer->buffer, "index") == 0)
         {
-            if (dcf_get_leader_last_index(1, &leadlastindex) == -1)
-            {
-
-                printf("\033[31m[ FAILED ]\033[0m get leader last index failed.\n");
-            }
-            else
-            {
-                printf("\033[32m[ PASSED ]\033[0m the leader last index is %ld.\n", leadlastindex);
-            }
-
-            if (dcf_get_node_last_disk_index(1, node_id, &last_disk_index) == -1)
-            {
-
-                printf("\033[31m[ FAILED ]\033[0m get node last disk index failed.\n");
-            }
-            else
-            {
-                printf("\033[32m[ PASSED ]\033[0m the node last disk index is %ld.\n", last_disk_index);
-            }
-
-            if (dcf_get_data_commit_index(1, node_id, &data_last_commit_index) == -1)
-            {
-
-                printf("\033[31m[ FAILED ]\033[0m get dcf data last commit index failed.\n");
-            }
-            else
-            {
-                printf("\033[32m[ PASSED ]\033[0m the data last commit index is %ld.\n", data_last_commit_index);
-            }
-
-            if (dcf_get_cluster_min_applied_idx(1, &cluster_min_applied_idx) == -1)
-            {
-
-                printf("\033[31m[ FAILED ]\033[0m get cluster min applied index failed.\n");
-            }
-            else
-            {
-                printf("\033[32m[ PASSED ]\033[0m the cluster min applid index is %ld.\n", cluster_min_applied_idx);
-            }
-            
+            DCFTest_index(node_id);
         }
 
         // DCFTest > query
         else if (strcmp(input_buffer->buffer, "query") == 0)
         {
-            char query_buffer[2048];
-            unsigned int length = 2048;
-            if (dcf_query_cluster_info(query_buffer, length) == -1)
-            {
-                printf("\033[33m[ FAILED ]\033[0m query cluster info failed.\n");
-            }
-            else
-            {
-                printf("\033[32m[ PASSED ]\033[0m query cluster info succeed, cluster info is %s.\n", query_buffer);
-            }
-
+            DCFTest_query();
         }
 
         // DCFTest > write <w_data>
@@ -560,49 +584,32 @@ int main(int argc, char *argv[])
                 DCFTest_read(1, readIndex, readbuffer, 1024);
             }
         }
-        
-        // DCFTest > get error
-        else if (strcmp(input_buffer->buffer, "get error") == 0)
-        {
-            int errorno = dcf_get_errorno();
-            printf("\033[32m[ RUN--- ]\033[0m error code is %d.\n", errorno);
-            char errorinfo[1024] = "";
-            printf("\033[32m[ PASSED ]\033[0m %s.\n", dcf_get_error(errorno));
-        }    
 
-        // DCFTest > get version
-        else if (strcmp(input_buffer->buffer, "get version") == 0)
-        {
-            printf("\033[32m[ PASSED ]\033[0m %s.\n", dcf_get_version());
-        }    
-
-        // DCFTest > change role <n_id> <n_role>
-        else if (strncmp(input_buffer->buffer, "change role", 11) == 0)
-        {   
-            // int dcf_change_member_role(unsigned int stream_id, unsigned int node_id, dcf_role_t new_role, unsigned int wait_timeout_ms);
-
-            unsigned int n_id = 0;
-            unsigned int n_role = 0;
-            int arg_size = sscanf(input_buffer->buffer, "change role %d %d", &n_id, &n_role);
-            if (arg_size < 2)
-            {
-                printf("\033[34m[ REMIND ]\033[0m usage: change role <n_id> <n_role>.\n");
-                printf("\033[34m[ REMIND ]\033[0m option:\n");
-                printf("\033[34m[ REMIND ]\033[0m     -n_id       node id.\n");
-                printf("\033[34m[ REMIND ]\033[0m     -n_role     node role (1:leader, 2:follower).\n");
-            }
-            else
-            {
-                if(dcf_change_member_role(1, n_id, n_role, 200) == 0)
-                {
-                    printf("\033[32m[ PASSED ]\033[0m change member role succeed.\n");
-                }
-                else
-                {
-                    printf("\033[31m[ FAILED ]\033[0m change member role failed.\n");
-                }
-            }
-        }
+        // // DCFTest > change role <n_id> <n_role>
+        // else if (strncmp(input_buffer->buffer, "change role", 11) == 0)
+        // {   
+        //     unsigned int n_id = 0;
+        //     unsigned int n_role = 0;
+        //     int arg_size = sscanf(input_buffer->buffer, "change role %d %d", &n_id, &n_role);
+        //     if (arg_size < 2)
+        //     {
+        //         printf("\033[34m[ REMIND ]\033[0m usage: change role <n_id> <n_role>.\n");
+        //         printf("\033[34m[ REMIND ]\033[0m option:\n");
+        //         printf("\033[34m[ REMIND ]\033[0m     -n_id       node id.\n");
+        //         printf("\033[34m[ REMIND ]\033[0m     -n_role     node role (1:leader, 2:follower).\n");
+        //     }
+        //     else
+        //     {
+        //         if(dcf_change_member_role(1, n_id, n_role, 200) == 0)
+        //         {
+        //             printf("\033[32m[ PASSED ]\033[0m change member role succeed.\n");
+        //         }
+        //         else
+        //         {
+        //             printf("\033[31m[ FAILED ]\033[0m change member role failed.\n");
+        //         }
+        //     }
+        // }
 
         // DCFTest > promote leader <n_id>
         else if (strncmp(input_buffer->buffer, "promote leader", 14) == 0)
@@ -657,8 +664,6 @@ int main(int argc, char *argv[])
             printf("\033[34m[ REMIND ]\033[0m query             query cluster information.\n");
             printf("\033[34m[ REMIND ]\033[0m write             write w_data to file.\n");
             printf("\033[34m[ REMIND ]\033[0m read              read data from r_index.\n");
-            printf("\033[34m[ REMIND ]\033[0m get version       get dcf version information.\n");
-            printf("\033[34m[ REMIND ]\033[0m change role       change node role.\n");
             printf("\033[34m[ REMIND ]\033[0m promote leader    promote follower to leader.\n");
             printf("\033[34m[ REMIND ]\033[0m demote follower   promote leader to follower.\n");
             printf("\033[34m[ REMIND ]\033[0m exit              exit DCFTest.\n");

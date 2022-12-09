@@ -1,1 +1,7 @@
-UTC+8 2022-12-09 17:51:04.559|DCF|38958|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29222,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29222, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29222, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-09 22:25:23.225|DCF|64081|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-09 22:25:24.384|DCF|64097|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-09 22:25:24.391|DCF|64097|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-09 22:25:24.402|DCF|64097|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-09 22:25:24.412|DCF|64097|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-09 22:25:24.418|DCF|64097|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-09 22:25:50.624|DCF|64097|INFO>dcf set applied index, stream_id=1 index=20

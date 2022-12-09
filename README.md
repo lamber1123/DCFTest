@@ -3,9 +3,9 @@
 
 DCF-Demo项目地址：https://github.com/NPUWDBLab/DCF-Demo
 
-![DCF-Test与DCF-Demo间的联系](./imgs/Figure1.png)
-
 DCFTest希望能够通过DCF-Demo中的代码来进行测试，所以首要工作是从DCF-Demo中将部分代码段提取出来。具体的做法是将dcf_test_main.c中的部分代码封装到dcf_test.h当中，供DCFTest调用。
+
+![DCF-Test与DCF-Demo间的联系](./imgs/Figure1.png)
 
 DCFTest实现了基于DCF的下列测试情景:
  * **集群选举测试**: DCFTest可以通过指令组合，实现集群节点与配置的动态变更。用以对容灾性自动与手动升降主备，集群状态查询，集群配置管理情景的测试。
