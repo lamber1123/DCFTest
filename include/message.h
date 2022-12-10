@@ -21,7 +21,7 @@
 #define MAX_CONNECT 20
 
 /* DCFTest客户端发送消息函数 */
-void DCFTest_msg(char *ip, char *msg, char *rec);
+int DCFTest_msg(char *ip, char *msg, char *rec);
 
 /* DCFTest服务器处理接收客户端消息函数 */
-void DCFTest_back();
+int DCFTest_back();

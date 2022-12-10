@@ -4,6 +4,7 @@
 #include "string.h"
 #include "dcf_interface.h"
 #include "dcf_demo.h"
+#include "message.h"
 #include <stdbool.h>
 #include <time.h>
 #include <unistd.h>
@@ -34,6 +35,11 @@ static void sig_proc(int signal)
 #endif
 
 bool isleader = false;
+
+void *start_server(void *fd)
+{
+    DCFTest_back();
+}
 
 int main(int argc, char *argv[])
 {
@@ -77,6 +83,8 @@ int main(int argc, char *argv[])
     unsigned long long int writeIndex = 0;
     char readbuffer[2048];
     unsigned long long readIndex = -1;
+
+    bool isopenback = 0;
 
     // DCFTest主循环
     do
@@ -212,7 +220,6 @@ int main(int argc, char *argv[])
         // DCFTest > read <r_index>
         else if (strncmp(input_buffer->buffer, "read", 4) == 0)
         {
-
             int arg_size = sscanf(input_buffer->buffer, "read %ld", &readIndex);
             if (arg_size < 1)
             {
@@ -293,6 +300,52 @@ int main(int argc, char *argv[])
             }
         }
 
+        // DCFTest > msg <n_ip> [m_msg]
+        else if (strncmp(input_buffer->buffer, "msg", 3) == 0)
+        {
+            char m_ip[MAX_LINE];
+            char m_msg[MAX_LINE];
+            char m_rec[MAX_LINE];
+            int arg_size = sscanf(input_buffer->buffer, "msg %s %s", m_ip, m_msg);
+            if (arg_size < 1)
+            {
+                printf("\033[34m[ REMIND ]\033[0m usage: msg <m_ip> [m_msg].\n");
+                printf("\033[34m[ REMIND ]\033[0m option:\n");
+                printf("\033[34m[ REMIND ]\033[0m     -m_ip         target node ip.\n");
+                printf("\033[34m[ REMIND ]\033[0m     -m_msg        message to send.\n");
+            }
+            else
+            {
+                printf("\033[32m[ RUN    ]\033[0m sending the message to %s...\n", m_ip);
+                if(DCFTest_msg(m_ip, m_msg, m_rec) == PASSED)
+                {
+                    printf("\033[32m[ ------ ]\033[0m %s: %s\n", m_ip, m_rec);
+                    printf("\033[32m[ PASSED ]\033[0m send message succed.\n");
+                }
+            }
+        }
+
+        // DCFTest > back
+        else if (strcmp(input_buffer->buffer, "back") == 0)
+        {
+            pthread_t back_tid;
+            if(isopenback == 0)
+            {
+                if (pthread_create(&back_tid , NULL , start_server, NULL) == -1)
+                {
+                    printf("\033[31m[ FAILED ]\033[0m pthread create failed.\n");
+                }
+                else 
+                {
+                    isopenback = 1;
+                }
+            }
+            else
+            {
+                printf("\033[31m[ FAILED ]\033[0m the background has started.\n");
+            }
+        }
+
         // DCFTest > other case
         else
         {
@@ -309,7 +362,7 @@ int main(int argc, char *argv[])
             printf("\033[34m[ REMIND ]\033[0m demote follower   promote leader to follower.\n");
             printf("\033[34m[ REMIND ]\033[0m exit              exit DCFTest.\n");
         }
-
+        
         // log truncate
         if ((++count) % 10000 == 0)
         {
@@ -323,8 +376,8 @@ int main(int argc, char *argv[])
             }
         }
 
+        cm_sleep(300);
         printf("\n");
-        cm_sleep(200);
 
     } while (1);
     

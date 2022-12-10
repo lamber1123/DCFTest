@@ -4,8 +4,11 @@
 
 #include "message.h"
 
+#define FAILED -1
+#define PASSED 0
+
 /* 客户端发送消息函数 */
-void DCFTest_msg(char *ip, char *msg, char *rec)
+int DCFTest_msg(char *ip, char *msg, char *rec)
 {
 	/*声明套接字和链接服务器地址*/
     int sockfd;
@@ -15,8 +18,10 @@ void DCFTest_msg(char *ip, char *msg, char *rec)
 	/*(1) 创建套接字*/
     if((sockfd = socket(AF_INET , SOCK_STREAM , 0)) == -1)
     {
-        perror("socket error");
-        exit(1);
+        // perror("socket error");
+        // exit(1);
+		printf("\033[31m[ FAILED ]\033[0m socket error.\n");
+		return FAILED;
     }//if
 
     /*(2) 设置链接服务器地址结构*/
@@ -25,40 +30,49 @@ void DCFTest_msg(char *ip, char *msg, char *rec)
     servaddr.sin_port = htons(PORT);
     if(inet_pton(AF_INET , ip , &servaddr.sin_addr) < 0)
     {
-        printf("inet_pton error for %s\n", ip);
-        exit(1);
+        // exit(1);
+        printf("\033[31m[ FAILED ]\033[0m inet_pton error for %s\n", ip);
+		return FAILED;
     }//if
 
     /*(3) 发送链接服务器请求*/
     if( connect(sockfd , (struct sockaddr *)&servaddr , sizeof(servaddr)) < 0)
     {
-        perror("connect error");
-        exit(1);
+        // perror("connect error");
+        // exit(1);
+		printf("\033[31m[ FAILED ]\033[0m connect error.\n");
+		return FAILED;
     }//if
 
 	/*处理客户端发送消息*/
 	if(send(sockfd , msg , strlen(msg) , 0) == -1)
 	{
-		perror("send error.\n");
+		// perror("send error.\n");
 		exit(1);
+		printf("\033[31m[ FAILED ]\033[0m send error.\n");
+		return FAILED;
 	}//if
 
 	/*处理接收客户端消息函数*/
 	if (rec == NULL)
 	{
-		perror("recv error.\n");
+		// perror("recv error.\n");
 		exit(1);
+		printf("\033[31m[ FAILED ]\033[0m rec was not allocated space.\n");
+		return FAILED;
 	}
 	memset(rec , 0 , MAX_LINE);
 	int n;
 	if((n = recv(sockfd , rec , MAX_LINE , 0)) == -1)
 	{
-		perror("recv error.\n");
-		exit(1);
+		// perror("recv error.\n");
+		// exit(1);
+		printf("\033[31m[ FAILED ]\033[0m recv error.\n");
+		return FAILED;
 	}//if
 	
 	rec[n] = '\0';
-
+	return PASSED;
 }
 
 /* 处理接收客户端消息函数 */
@@ -71,7 +85,8 @@ void *recv_message(void *fd)
 	int n;
 	if((n = recv(sockfd , buf , MAX_LINE , 0)) == -1)
 	{
-		perror("recv error.\n");
+		// perror("recv error.\n");
+		printf("\033[31m[ FAILED ]\033[0m recv error.\n");
 		exit(1);
 	}//if
 		
@@ -84,14 +99,15 @@ void *recv_message(void *fd)
 
 	if(send(sockfd , msg , strlen(msg) , 0) == -1)
 	{
-		perror("send error.\n");
+		// perror("send error.\n");
+		printf("\033[31m[ FAILED ]\033[0m send error.\n");
 		exit(1);
 	}//if	
 
 }
 
 /* 后端处理接收客户端消息函数 */
-void DCFTest_back()
+int DCFTest_back()
 {
 	//声明套接字
 	int listenfd , connfd;
@@ -105,8 +121,10 @@ void DCFTest_back()
 	/*(1) 创建套接字*/
 	if((listenfd = socket(AF_INET , SOCK_STREAM , 0)) == -1)
 	{
-		perror("socket error.\n");
-		exit(1);
+		// perror("socket error.\n");
+		// exit(1);
+		printf("\033[31m[ FAILED ]\033[0m socket error.\n");
+		return FAILED;
 	}//if
 
 	/*(2) 初始化地址结构*/
@@ -118,16 +136,22 @@ void DCFTest_back()
 	/*(3) 绑定套接字和端口*/
 	if(bind(listenfd , (struct sockaddr *)&servaddr , sizeof(servaddr)) < 0)
 	{
-		perror("bind error.\n");
-		exit(1);
+		// perror("bind error.\n");
+		// exit(1);
+		printf("\033[31m[ FAILED ]\033[0m bind error.\n");
+		return FAILED;
 	}//if
 
 	/*(4) 监听*/
 	if(listen(listenfd , LISTENQ) < 0)
 	{
-		perror("listen error.\n");
-		exit(1);
+		// perror("listen error.\n");
+		// exit(1);
+		printf("\033[31m[ FAILED ]\033[0m listen error.\n");
+		return FAILED;
 	}//if
+
+	printf("\033[32m[ PASSED ]\033[0m background start succeed.\n");
 
 	int count = 0;
 	/*(5) 接受客户请求，并创建线程处理*/
@@ -136,18 +160,23 @@ void DCFTest_back()
 		clilen = sizeof(cliaddr);
 		if((connfd = accept(listenfd , (struct sockaddr *)&cliaddr , &clilen)) < 0)
 		{
-			perror("accept error.\n");
-			exit(1);
+			// perror("accept error.\n");
+			// exit(1);
+			printf("\033[31m[ FAILED ]\033[0m accept error.\n");
+			return FAILED;
 		}//if
-
-		printf("\033[32m[ ------ ]\033[0m server: got connection from %s\n", inet_ntoa(cliaddr.sin_addr));
+		
+		printf("\n");
+		printf("\033[32m[ ------ ]\033[0m got connection from %s\n", inet_ntoa(cliaddr.sin_addr));
 		printf("\033[32m[ ------ ]\033[0m %s: ", inet_ntoa(cliaddr.sin_addr));
 
 		/*创建子线程处理该客户链接接收消息*/
 		if(pthread_create(&recv_tid , NULL , recv_message, &connfd) == -1)
 		{
-			perror("pthread create error.\n");
-			exit(1);
+			// perror("pthread create error.\n");
+			// exit(1);
+			printf("\033[31m[ FAILED ]\033[0m pthread create error.\n");
+			return FAILED;
 		}//if
 	}
 }
