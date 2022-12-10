@@ -77,10 +77,10 @@ void *recv_message(void *fd)
 		
 	buf[n] = '\0';		
 
-	printf("\nClient: %s\n", buf);
+	printf("%s\n", buf);
 
 	/*处理服务器发送消息*/
-	char *msg = "receive.";
+	char *msg = "got it.";
 
 	if(send(sockfd , msg , strlen(msg) , 0) == -1)
 	{
@@ -140,7 +140,8 @@ void DCFTest_back()
 			exit(1);
 		}//if
 
-		printf("server: got connection from %s\n", inet_ntoa(cliaddr.sin_addr));
+		printf("\033[32m[ ------ ]\033[0m server: got connection from %s\n", inet_ntoa(cliaddr.sin_addr));
+		printf("\033[32m[ ------ ]\033[0m %s: ", inet_ntoa(cliaddr.sin_addr));
 
 		/*创建子线程处理该客户链接接收消息*/
 		if(pthread_create(&recv_tid , NULL , recv_message, &connfd) == -1)
