@@ -1,0 +1,8 @@
+UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 00:01:46.211|DCF|17449|INFO>[META]md_to_string len:339 value:[{"stream_id":1,"node_id":1,"ip":"172.19.0.202","port":29322,"role":"LEADER","weight":1,"group":0,"priority":0},{"stream_id":1,"node_id":2,"ip":"172.19.0.203","port":29322,"role":"FOLLOWER","weight":1,"group":0,"priority":0},{"stream_id":1,"node_id":3,"ip":"172.19.0.204","port":29322,"role":"FOLLOWER","weight":1,"group":0,"priority":0}]
+UTC+8 2022-12-11 00:01:46.211|DCF|17449|INFO>[META]Md store write, chksum:2445557359 buf:[{"stream_id":1,"node_id":1,"ip":"172.19.0.202","port":29322,"role":"LEADER","weight":1,"group":0,"priority":0},{"stream_id":1,"node_id":2,"ip":"172.19.0.203","port":29322,"role":"FOLLOWER","weight":1,"group":0,"priority":0},{"stream_id":1,"node_id":3,"ip":"172.19.0.204","port":29322,"role":"FOLLOWER","weight":1,"group":0,"priority":0}]
+UTC+8 2022-12-11 00:01:46.213|DCF|17449|ERROR>node id 5 is invalid
+UTC+8 2022-12-11 00:01:46.213|DCF|17449|ERROR>metadata init failed, error code=0, error info=
+UTC+8 2022-12-11 00:01:46.213|DCF|17449|INFO>begin to clear_resource
+UTC+8 2022-12-11 00:01:46.213|DCF|17449|INFO>deinit exception report
+UTC+8 2022-12-11 00:01:46.213|DCF|17449|INFO>clear_resource succeed

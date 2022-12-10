@@ -1,0 +1,8 @@
+UTC+8 2022-12-11 00:01:46.207|DCF|17449|INFO>dcf start, node_id=4 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>dcf set param, param_name=DATA_PATH param_value=./node5
+UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>dcf set param, param_name=LOG_FILE_PERMISSION param_value=640
+UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>dcf set param, param_name=LOG_PATH_PERMISSION param_value=750
+UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>dcf set param, param_name=FLOW_CONTROL_CPU_THRESHOLD param_value=80
+UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>dcf set param, param_name=FLOW_CONTROL_NET_QUEUE_MESSAGE_NUM_THRESHOLD param_value=100
+UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>dcf set param, param_name=FLOW_CONTROL_DISK_RAWAIT_THRESHOLD param_value=12000
+UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>dcf set param, param_name=LOG_LEVEL param_value=RUN_ERR|RUN_WAR|RUN_INF|DEBUG_ERR|DEBUG_WAR|DEBUG_INF|MEC|OPER|TRACE|PROFILE

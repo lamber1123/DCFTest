@@ -56,3 +56,141 @@ UTC+8 2022-12-10 22:35:39.035|DCF|10261|INFO>dcf set applied index, stream_id=1 
 UTC+8 2022-12-10 22:35:39.035|DCF|10261|INFO>dcf set applied index, stream_id=1 index=13
 UTC+8 2022-12-10 22:35:39.036|DCF|10261|INFO>dcf set applied index, stream_id=1 index=20
 UTC+8 2022-12-10 22:35:39.036|DCF|10261|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 22:40:57.401|DCF|10868|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 22:41:01.253|DCF|10884|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 22:41:01.254|DCF|10884|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 22:41:01.254|DCF|10884|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 22:41:01.254|DCF|10884|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 22:41:01.254|DCF|10884|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 22:41:01.255|DCF|10884|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 22:41:01.255|DCF|10884|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:28:21.971|DCF|14153|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:28:37.434|DCF|14171|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:28:37.434|DCF|14171|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:28:37.434|DCF|14171|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:28:37.434|DCF|14171|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:28:37.435|DCF|14171|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:28:37.435|DCF|14171|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:28:37.436|DCF|14171|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:29:11.883|DCF|14294|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:29:12.955|DCF|14310|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:29:12.955|DCF|14310|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:29:12.956|DCF|14310|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:29:12.956|DCF|14310|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:29:12.956|DCF|14310|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:29:12.957|DCF|14310|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:29:12.957|DCF|14310|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:31:34.679|DCF|14556|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:31:35.550|DCF|14572|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:31:35.550|DCF|14572|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:31:35.550|DCF|14572|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:31:35.550|DCF|14572|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:31:35.551|DCF|14572|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:31:35.551|DCF|14572|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:31:35.552|DCF|14572|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:35:34.518|DCF|14902|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:35:35.210|DCF|14918|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:35:35.210|DCF|14918|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:35:35.210|DCF|14918|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:35:35.211|DCF|14918|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:35:35.211|DCF|14918|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:35:35.212|DCF|14918|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:35:35.213|DCF|14918|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:36:21.408|DCF|15036|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:36:22.736|DCF|15052|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:36:22.736|DCF|15052|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:36:22.736|DCF|15052|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:36:22.736|DCF|15052|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:36:22.737|DCF|15052|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:36:22.738|DCF|15052|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:36:22.738|DCF|15052|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:37:33.025|DCF|15218|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:37:34.277|DCF|15235|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:37:34.278|DCF|15235|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:37:34.278|DCF|15235|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:37:34.278|DCF|15235|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:37:34.278|DCF|15235|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:37:34.279|DCF|15235|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:37:34.279|DCF|15235|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:38:58.367|DCF|15453|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:38:59.939|DCF|15471|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:38:59.939|DCF|15471|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:38:59.939|DCF|15471|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:38:59.939|DCF|15471|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:38:59.940|DCF|15471|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:38:59.940|DCF|15471|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:38:59.941|DCF|15471|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:39:44.864|DCF|15565|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:39:46.472|DCF|15582|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:39:46.473|DCF|15582|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:39:46.473|DCF|15582|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:39:46.473|DCF|15582|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:39:46.473|DCF|15582|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:39:46.475|DCF|15582|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:39:46.475|DCF|15582|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:40:39.496|DCF|15717|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:40:41.006|DCF|15734|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:40:41.006|DCF|15734|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:40:41.006|DCF|15734|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:40:41.006|DCF|15734|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:40:41.006|DCF|15734|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:40:41.007|DCF|15734|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:40:41.007|DCF|15734|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:42:47.450|DCF|15929|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:42:48.594|DCF|15946|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:42:48.595|DCF|15946|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:42:48.595|DCF|15946|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:42:48.595|DCF|15946|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:42:48.595|DCF|15946|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:42:48.596|DCF|15946|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:42:48.596|DCF|15946|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:43:12.780|DCF|16055|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:43:17.104|DCF|16076|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:43:17.104|DCF|16076|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:43:17.104|DCF|16076|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:43:17.104|DCF|16076|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:43:17.105|DCF|16076|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:43:17.105|DCF|16076|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:43:17.106|DCF|16076|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-10 23:58:23.311|DCF|17023|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-10 23:58:24.188|DCF|17039|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-10 23:58:24.188|DCF|17039|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-10 23:58:24.188|DCF|17039|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-10 23:58:24.188|DCF|17039|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-10 23:58:24.189|DCF|17039|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-10 23:58:24.189|DCF|17039|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-10 23:58:24.190|DCF|17039|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-11 00:01:28.593|DCF|17350|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-11 00:01:29.793|DCF|17368|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-11 00:01:29.793|DCF|17368|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-11 00:01:29.793|DCF|17368|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-11 00:01:29.793|DCF|17368|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-11 00:01:29.793|DCF|17368|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-11 00:01:29.794|DCF|17368|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-11 00:01:29.795|DCF|17368|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-11 00:01:46.063|DCF|17449|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-11 00:01:46.108|DCF|17449|INFO>dcf set param, param_name=DATA_PATH param_value=./node2
+UTC+8 2022-12-11 00:01:46.108|DCF|17449|INFO>dcf set param, param_name=LOG_FILE_PERMISSION param_value=640
+UTC+8 2022-12-11 00:01:46.108|DCF|17449|INFO>dcf set param, param_name=LOG_PATH_PERMISSION param_value=750
+UTC+8 2022-12-11 00:01:46.108|DCF|17449|INFO>dcf set param, param_name=FLOW_CONTROL_CPU_THRESHOLD param_value=80
+UTC+8 2022-12-11 00:01:46.108|DCF|17449|INFO>dcf set param, param_name=FLOW_CONTROL_NET_QUEUE_MESSAGE_NUM_THRESHOLD param_value=100
+UTC+8 2022-12-11 00:01:46.108|DCF|17449|INFO>dcf set param, param_name=FLOW_CONTROL_DISK_RAWAIT_THRESHOLD param_value=12000
+UTC+8 2022-12-11 00:01:46.108|DCF|17449|INFO>dcf set param, param_name=LOG_LEVEL param_value=RUN_ERR|RUN_WAR|RUN_INF|DEBUG_ERR|DEBUG_WAR|DEBUG_INF|MEC|OPER|TRACE|PROFILE
+UTC+8 2022-12-11 00:03:40.051|DCF|17615|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-11 00:04:44.170|DCF|17631|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-11 00:04:44.170|DCF|17631|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-11 00:04:44.170|DCF|17631|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-11 00:04:44.171|DCF|17631|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-11 00:04:44.171|DCF|17631|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-11 00:04:44.172|DCF|17631|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-11 00:04:44.172|DCF|17631|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-11 00:06:30.452|DCF|17631|INFO>dcf set applied index, stream_id=1 index=36
+UTC+8 2022-12-11 00:16:23.849|DCF|18432|INFO>dcf start, node_id=1 cfg_str=[{"stream_id" : 1, "node_id" : 1, "ip" : "172.19.0.202", "port" : 29322,"role" : "LEADER"}, {"stream_id" : 1, "node_id" : 2, "ip" : "172.19.0.203", "port" : 29322, "role" : "FOLLOWER"}, {"stream_id" : 1, "node_id" : 3, "ip" : "172.19.0.204", "port" : 29322, "role" : "FOLLOWER"} ]
+UTC+8 2022-12-11 00:16:25.957|DCF|18449|INFO>dcf set applied index, stream_id=1 index=2
+UTC+8 2022-12-11 00:16:25.957|DCF|18449|INFO>dcf set applied index, stream_id=1 index=4
+UTC+8 2022-12-11 00:16:25.957|DCF|18449|INFO>dcf set applied index, stream_id=1 index=7
+UTC+8 2022-12-11 00:16:25.957|DCF|18449|INFO>dcf set applied index, stream_id=1 index=10
+UTC+8 2022-12-11 00:16:25.958|DCF|18449|INFO>dcf set applied index, stream_id=1 index=13
+UTC+8 2022-12-11 00:16:25.959|DCF|18449|INFO>dcf set applied index, stream_id=1 index=20
+UTC+8 2022-12-11 00:16:25.960|DCF|18449|INFO>dcf set applied index, stream_id=1 index=24
+UTC+8 2022-12-11 00:16:25.960|DCF|18449|INFO>dcf set applied index, stream_id=1 index=36

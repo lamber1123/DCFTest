@@ -13,6 +13,8 @@
 
 extern bool isleader;
 
+
+#ifndef STRUCT_INPUTBUFFER
 typedef struct
 {
     char *buffer;
@@ -20,6 +22,9 @@ typedef struct
     ssize_t inputLength;
 
 } inputBuffer;
+
+#define STRUCT_INPUTBUFFER 
+#endif
 
 inputBuffer *newInputBuffer();
 

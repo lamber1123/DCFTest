@@ -13,6 +13,7 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <pthread.h>
+#include "dcf_demo.h"
 
 #define MAX_LINE 2048
 #define PORT 6001

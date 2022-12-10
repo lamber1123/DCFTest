@@ -135,7 +135,7 @@ int main(int argc, char *argv[])
             dcf_stop();
         }
 
-        // DCFTest > add node
+        // DCFTest > add node <a_id> <a_ip> <a_port>
         else if (strncmp(input_buffer->buffer, "add node", 8) == 0)
         {
             unsigned int AddNode_id = -1;
@@ -164,7 +164,7 @@ int main(int argc, char *argv[])
             }
         }
 
-        // DCFTest > remove node
+        // DCFTest > remove node <a_id>
         else if (strncmp(input_buffer->buffer, "remove node", 11) == 0)
         {
             unsigned int AddNode_id = -1;
@@ -303,24 +303,24 @@ int main(int argc, char *argv[])
         // DCFTest > msg <n_ip> [m_msg]
         else if (strncmp(input_buffer->buffer, "msg", 3) == 0)
         {
-            char m_ip[MAX_LINE];
-            char m_msg[MAX_LINE];
-            char m_rec[MAX_LINE];
-            int arg_size = sscanf(input_buffer->buffer, "msg %s %s", m_ip, m_msg);
+            char m_ip[MAX_LINE] = "";
+            char m_arg[MAX_LINE] = "";
+            char m_index[MAX_LINE] = "";
+            char m_rec[MAX_LINE] = "";
+            int arg_size = sscanf(input_buffer->buffer, "msg %s %s %s", m_ip, m_arg, m_index);
             if (arg_size < 1)
             {
-                printf("\033[34m[ REMIND ]\033[0m usage: msg <m_ip> [m_msg].\n");
+                printf("\033[34m[ REMIND ]\033[0m usage: msg <m_ip> read <m_index>.\n");
                 printf("\033[34m[ REMIND ]\033[0m option:\n");
                 printf("\033[34m[ REMIND ]\033[0m     -m_ip         target node ip.\n");
-                printf("\033[34m[ REMIND ]\033[0m     -m_msg        message to send.\n");
+                printf("\033[34m[ REMIND ]\033[0m     -m_index      read index.\n");
             }
-            else
+            else if (strcmp(m_arg, "read") == 0)
             {
-                printf("\033[32m[ RUN    ]\033[0m sending the message to %s...\n", m_ip);
-                if(DCFTest_msg(m_ip, m_msg, m_rec) == PASSED)
+                printf("\033[32m[ RUN    ]\033[0m sending the message...\n");
+                if(DCFTest_msg(m_ip, m_index, m_rec) == PASSED)
                 {
-                    printf("\033[32m[ ------ ]\033[0m %s: %s\n", m_ip, m_rec);
-                    printf("\033[32m[ PASSED ]\033[0m send message succed.\n");
+                    printf("\033[32m[ PASSED ]\033[0m %s: %s\n", m_ip, m_rec);
                 }
             }
         }

@@ -95,7 +95,10 @@ void *recv_message(void *fd)
 	printf("%s\n", buf);
 
 	/*处理服务器发送消息*/
-	char *msg = "got it.";
+	unsigned long long readIndex = -1;
+	sscanf(buf, "%ld", &readIndex);
+	char msg[MAX_LINE];
+	DCFTest_read(1, readIndex, msg, 1024);
 
 	if(send(sockfd , msg , strlen(msg) , 0) == -1)
 	{
