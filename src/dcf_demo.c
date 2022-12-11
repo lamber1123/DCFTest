@@ -180,16 +180,15 @@ void DCFTest_write(bool isleader, inputBuffer *input_buffer, char *writeContents
     }
 }
 
-void DCFTest_read(unsigned int streamId, unsigned long long ReadIndex, char *ReadBuffer, unsigned int ReadLength)
+int DCFTest_read(unsigned int streamId, unsigned long long ReadIndex, char *ReadBuffer, unsigned int ReadLength)
 {
     if (dcf_read(1, ReadIndex, ReadBuffer, ReadLength) == -1)
     {
         printf("\033[31m[ FAILED ]\033[0m dcf read failed.\n");
+        return FAILED;
     }
-    else
-    {
-        printf("\033[32m[ PASSED ]\033[0m dcf read succeed, the index %ld read contents is %s.\n", ReadIndex, ReadBuffer);
-    }
+
+    return PASSED;
 }
 
 int DCFTest_start(int node_id, char *dcf_start_config)
@@ -325,21 +324,19 @@ void DCFTest_index(int node_id)
     }
     else
     {
-        printf("\033[32m[ PASSED ]\033[0m the cluster min applid index is %ld.\n", cluster_min_applied_idx);
+        printf("\033[32m[ PASSED ]\033[0m the cluster min applied index is %ld.\n", cluster_min_applied_idx);
     }
     
 }
 
-void DCFTest_query()
+int DCFTest_query(char *query_buffer, unsigned int length)
 {
-    char query_buffer[1024];
-    unsigned int length = 1024;
-    if (dcf_query_cluster_info(query_buffer, length) == -1)
+    if (dcf_query_cluster_info(query_buffer, length) < 0)
     {
-        printf("\033[33m[ FAILED ]\033[0m query cluster info failed.\n");
+        return FAILED;
     }
     else
     {
-        printf("\033[32m[ PASSED ]\033[0m cluster info: %s.\n", query_buffer);
+        return PASSED;
     }
 }

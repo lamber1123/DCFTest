@@ -44,7 +44,7 @@ int DCFTest_msg(char *ip, char *msg, char *rec)
 		return FAILED;
     }//if
 
-	/*处理客户端发送消息*/
+	/*客户端发送消息*/
 	if(send(sockfd , msg , strlen(msg) , 0) == -1)
 	{
 		// perror("send error.\n");
@@ -92,14 +92,14 @@ void *recv_message(void *fd)
 		
 	buf[n] = '\0';		
 
-	printf("%s\n", buf);
+	// printf("%s\n", buf);
 
 	/*处理服务器发送消息*/
 	unsigned long long readIndex = -1;
 	sscanf(buf, "%ld", &readIndex);
-	char msg[MAX_LINE];
+	char msg[MAX_LINE] = "";
 	DCFTest_read(1, readIndex, msg, 1024);
-
+	
 	if(send(sockfd , msg , strlen(msg) , 0) == -1)
 	{
 		// perror("send error.\n");
@@ -154,7 +154,7 @@ int DCFTest_back()
 		return FAILED;
 	}//if
 
-	printf("\033[32m[ PASSED ]\033[0m background start succeed.\n");
+	printf("\033[32m[ PASSED ]\033[0m msg receiving module started.\n");
 
 	int count = 0;
 	/*(5) 接受客户请求，并创建线程处理*/
@@ -169,9 +169,9 @@ int DCFTest_back()
 			return FAILED;
 		}//if
 		
-		printf("\n");
-		printf("\033[32m[ ------ ]\033[0m got connection from %s\n", inet_ntoa(cliaddr.sin_addr));
-		printf("\033[32m[ ------ ]\033[0m %s: ", inet_ntoa(cliaddr.sin_addr));
+		// printf("\n");
+		// printf("\033[32m[ ------ ]\033[0m got connection from %s\n", inet_ntoa(cliaddr.sin_addr));
+		// printf("\033[32m[ ------ ]\033[0m %s: ", inet_ntoa(cliaddr.sin_addr));
 
 		/*创建子线程处理该客户链接接收消息*/
 		if(pthread_create(&recv_tid , NULL , recv_message, &connfd) == -1)

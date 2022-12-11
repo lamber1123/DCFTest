@@ -27,3 +27,192 @@ UTC+8 2022-12-11 00:01:46.157|DCF|17449|ERROR>network init failed, error code=50
 UTC+8 2022-12-11 00:01:46.157|DCF|17449|INFO>begin to clear_resource
 UTC+8 2022-12-11 00:01:46.158|DCF|17449|INFO>deinit exception report
 UTC+8 2022-12-11 00:01:46.158|DCF|17449|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:21:53.684|DCF|62019|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:21:53.686|DCF|62019|INFO>[META] parse stream info: stream_id=1 node_id=1 ip=172.19.0.202 port=29322 role=LEADER group=0 priority=0
+UTC+8 2022-12-11 13:21:53.686|DCF|62019|INFO>[META] parse stream info: stream_id=1 node_id=2 ip=172.19.0.203 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:21:53.686|DCF|62019|INFO>[META] parse stream info: stream_id=1 node_id=3 ip=172.19.0.204 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:21:53.686|DCF|62019|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-11 13:21:53.687|DCF|62024|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:21:53.687|DCF|62019|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-11 13:21:53.687|DCF|62025|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:21:53.687|DCF|62019|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:21:53.687|DCF|62019|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:21:53.687|DCF|62019|ERROR>[MEC]failed to create lsnr sockets for listener type 0
+UTC+8 2022-12-11 13:21:53.687|DCF|62019|ERROR>[MEC]start tcp lsnr failed.
+UTC+8 2022-12-11 13:21:53.687|DCF|62019|ERROR>[MEC]start lsnr failed.
+UTC+8 2022-12-11 13:21:53.687|DCF|62019|INFO>[MEC]disconnect node 1.
+UTC+8 2022-12-11 13:21:53.687|DCF|62019|INFO>[MEC]disconnect node 3.
+UTC+8 2022-12-11 13:21:53.708|DCF|62025|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:21:53.729|DCF|62024|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|ERROR>network init failed, error code=506, error info=Tcp port conflict 172.19.0.203:29322
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>deinit exception report
+UTC+8 2022-12-11 13:21:53.729|DCF|62019|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:24:35.280|DCF|62331|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:24:35.282|DCF|62331|INFO>[META] parse stream info: stream_id=1 node_id=1 ip=172.19.0.202 port=29322 role=LEADER group=0 priority=0
+UTC+8 2022-12-11 13:24:35.282|DCF|62331|INFO>[META] parse stream info: stream_id=1 node_id=2 ip=172.19.0.203 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:24:35.282|DCF|62331|INFO>[META] parse stream info: stream_id=1 node_id=3 ip=172.19.0.204 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:24:35.282|DCF|62331|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-11 13:24:35.282|DCF|62336|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:24:35.282|DCF|62337|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:24:35.282|DCF|62331|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-11 13:24:35.282|DCF|62331|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:24:35.282|DCF|62331|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:24:35.283|DCF|62331|ERROR>[MEC]failed to create lsnr sockets for listener type 0
+UTC+8 2022-12-11 13:24:35.283|DCF|62331|ERROR>[MEC]start tcp lsnr failed.
+UTC+8 2022-12-11 13:24:35.283|DCF|62331|ERROR>[MEC]start lsnr failed.
+UTC+8 2022-12-11 13:24:35.283|DCF|62331|INFO>[MEC]disconnect node 1.
+UTC+8 2022-12-11 13:24:35.283|DCF|62331|INFO>[MEC]disconnect node 3.
+UTC+8 2022-12-11 13:24:35.304|DCF|62337|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:24:35.325|DCF|62336|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|ERROR>network init failed, error code=506, error info=Tcp port conflict 172.19.0.203:29322
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>deinit exception report
+UTC+8 2022-12-11 13:24:35.325|DCF|62331|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:24:43.000|DCF|62427|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:24:43.002|DCF|62427|INFO>[META] parse stream info: stream_id=1 node_id=1 ip=172.19.0.202 port=29322 role=LEADER group=0 priority=0
+UTC+8 2022-12-11 13:24:43.002|DCF|62427|INFO>[META] parse stream info: stream_id=1 node_id=2 ip=172.19.0.203 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:24:43.002|DCF|62427|INFO>[META] parse stream info: stream_id=1 node_id=3 ip=172.19.0.204 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:24:43.002|DCF|62427|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-11 13:24:43.002|DCF|62432|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:24:43.002|DCF|62433|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:24:43.002|DCF|62427|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-11 13:24:43.002|DCF|62427|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:24:43.002|DCF|62427|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:24:43.003|DCF|62427|ERROR>[MEC]failed to create lsnr sockets for listener type 0
+UTC+8 2022-12-11 13:24:43.003|DCF|62427|ERROR>[MEC]start tcp lsnr failed.
+UTC+8 2022-12-11 13:24:43.003|DCF|62427|ERROR>[MEC]start lsnr failed.
+UTC+8 2022-12-11 13:24:43.003|DCF|62427|INFO>[MEC]disconnect node 1.
+UTC+8 2022-12-11 13:24:43.003|DCF|62427|INFO>[MEC]disconnect node 3.
+UTC+8 2022-12-11 13:24:43.023|DCF|62433|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:24:43.045|DCF|62432|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|ERROR>network init failed, error code=506, error info=Tcp port conflict 172.19.0.203:29322
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>deinit exception report
+UTC+8 2022-12-11 13:24:43.045|DCF|62427|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:25:46.838|DCF|62648|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:25:46.840|DCF|62648|INFO>[META] parse stream info: stream_id=1 node_id=1 ip=172.19.0.202 port=29322 role=LEADER group=0 priority=0
+UTC+8 2022-12-11 13:25:46.840|DCF|62648|INFO>[META] parse stream info: stream_id=1 node_id=2 ip=172.19.0.203 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:25:46.840|DCF|62648|INFO>[META] parse stream info: stream_id=1 node_id=3 ip=172.19.0.204 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:25:46.840|DCF|62648|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-11 13:25:46.840|DCF|62653|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:25:46.840|DCF|62648|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-11 13:25:46.840|DCF|62654|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:25:46.840|DCF|62648|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:25:46.840|DCF|62648|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:25:46.841|DCF|62648|ERROR>[MEC]failed to create lsnr sockets for listener type 0
+UTC+8 2022-12-11 13:25:46.841|DCF|62648|ERROR>[MEC]start tcp lsnr failed.
+UTC+8 2022-12-11 13:25:46.841|DCF|62648|ERROR>[MEC]start lsnr failed.
+UTC+8 2022-12-11 13:25:46.841|DCF|62648|INFO>[MEC]disconnect node 1.
+UTC+8 2022-12-11 13:25:46.841|DCF|62648|INFO>[MEC]disconnect node 3.
+UTC+8 2022-12-11 13:25:46.861|DCF|62654|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:25:46.883|DCF|62653|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|ERROR>network init failed, error code=506, error info=Tcp port conflict 172.19.0.203:29322
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>deinit exception report
+UTC+8 2022-12-11 13:25:46.883|DCF|62648|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:26:38.754|DCF|62858|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:26:38.756|DCF|62858|INFO>[META] parse stream info: stream_id=1 node_id=1 ip=172.19.0.202 port=29322 role=LEADER group=0 priority=0
+UTC+8 2022-12-11 13:26:38.756|DCF|62858|INFO>[META] parse stream info: stream_id=1 node_id=2 ip=172.19.0.203 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:26:38.757|DCF|62858|INFO>[META] parse stream info: stream_id=1 node_id=3 ip=172.19.0.204 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:26:38.757|DCF|62858|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-11 13:26:38.757|DCF|62863|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:26:38.757|DCF|62858|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-11 13:26:38.757|DCF|62864|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:26:38.757|DCF|62858|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:26:38.757|DCF|62858|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:26:38.757|DCF|62858|ERROR>[MEC]failed to create lsnr sockets for listener type 0
+UTC+8 2022-12-11 13:26:38.757|DCF|62858|ERROR>[MEC]start tcp lsnr failed.
+UTC+8 2022-12-11 13:26:38.757|DCF|62858|ERROR>[MEC]start lsnr failed.
+UTC+8 2022-12-11 13:26:38.758|DCF|62858|INFO>[MEC]disconnect node 1.
+UTC+8 2022-12-11 13:26:38.758|DCF|62858|INFO>[MEC]disconnect node 3.
+UTC+8 2022-12-11 13:26:38.778|DCF|62864|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:26:38.799|DCF|62863|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:26:38.799|DCF|62858|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:26:38.799|DCF|62858|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:26:38.799|DCF|62858|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:26:38.799|DCF|62858|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:26:38.799|DCF|62858|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:26:38.800|DCF|62858|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:26:38.800|DCF|62858|ERROR>network init failed, error code=507, error info=Failed to bind socket for 172.19.0.203:29322, error code 99
+UTC+8 2022-12-11 13:26:38.800|DCF|62858|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:26:38.800|DCF|62858|INFO>deinit exception report
+UTC+8 2022-12-11 13:26:38.800|DCF|62858|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:29:35.883|DCF|63189|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:29:35.885|DCF|63189|INFO>[META] parse stream info: stream_id=1 node_id=1 ip=172.19.0.202 port=29322 role=LEADER group=0 priority=0
+UTC+8 2022-12-11 13:29:35.885|DCF|63189|INFO>[META] parse stream info: stream_id=1 node_id=2 ip=172.19.0.203 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|INFO>[META] parse stream info: stream_id=1 node_id=3 ip=172.19.0.204 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-11 13:29:35.886|DCF|63194|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-11 13:29:35.886|DCF|63195|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|ERROR>[MEC]failed to create lsnr sockets for listener type 0
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|ERROR>[MEC]start tcp lsnr failed.
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|ERROR>[MEC]start lsnr failed.
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|INFO>[MEC]disconnect node 1.
+UTC+8 2022-12-11 13:29:35.886|DCF|63189|INFO>[MEC]disconnect node 3.
+UTC+8 2022-12-11 13:29:35.907|DCF|63195|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:29:35.928|DCF|63194|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|ERROR>network init failed, error code=507, error info=Failed to bind socket for 172.19.0.203:29322, error code 99
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>deinit exception report
+UTC+8 2022-12-11 13:29:35.928|DCF|63189|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:30:03.654|DCF|63413|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:30:03.656|DCF|63413|INFO>[META] parse stream info: stream_id=1 node_id=1 ip=172.19.0.202 port=29322 role=LEADER group=0 priority=0
+UTC+8 2022-12-11 13:30:03.656|DCF|63413|INFO>[META] parse stream info: stream_id=1 node_id=2 ip=172.19.0.203 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:30:03.656|DCF|63413|INFO>[META] parse stream info: stream_id=1 node_id=3 ip=172.19.0.204 port=29322 role=FOLLOWER group=0 priority=0
+UTC+8 2022-12-11 13:30:03.656|DCF|63413|INFO>[META]Md init succeed, metadata: checksum:2445557359
+UTC+8 2022-12-11 13:30:03.656|DCF|63418|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:30:03.656|DCF|63413|INFO>[MEC]mec_init_ssl: ssl is disabled.
+UTC+8 2022-12-11 13:30:03.656|DCF|63419|INFO>[MEC]reactor thread started
+UTC+8 2022-12-11 13:30:03.656|DCF|63413|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:30:03.656|DCF|63413|INFO>[MEC]high msg_pool_extent=8, low msg_pool_extent=64
+UTC+8 2022-12-11 13:30:03.657|DCF|63413|ERROR>[MEC]failed to create lsnr sockets for listener type 0
+UTC+8 2022-12-11 13:30:03.657|DCF|63413|ERROR>[MEC]start tcp lsnr failed.
+UTC+8 2022-12-11 13:30:03.657|DCF|63413|ERROR>[MEC]start lsnr failed.
+UTC+8 2022-12-11 13:30:03.657|DCF|63413|INFO>[MEC]disconnect node 1.
+UTC+8 2022-12-11 13:30:03.657|DCF|63413|INFO>[MEC]disconnect node 3.
+UTC+8 2022-12-11 13:30:03.677|DCF|63419|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:30:03.698|DCF|63418|INFO>[MEC]reactor thread closed
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>[MEC]begin to destroy agent pool
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>[MEC]all agents' thread have been closed
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>[MEC]destroy agent pool end
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|ERROR>network init failed, error code=507, error info=Failed to bind socket for 172.19.0.203:29322, error code 99
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>deinit exception report
+UTC+8 2022-12-11 13:30:03.699|DCF|63413|INFO>clear_resource succeed

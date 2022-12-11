@@ -74,6 +74,15 @@ int main(int argc, char *argv[])
         }
     }
     
+
+    // 打开后端msg服务
+    pthread_t back_tid;
+    if (pthread_create(&back_tid , NULL , start_server, NULL) == -1)
+    {
+        printf("\033[31m[ FAILED ]\033[0m pthread create failed.\n");
+    }
+
+    cm_sleep(300);
     printf("\n");
 
     char *writeContents = (char *)malloc(1024);
@@ -83,8 +92,6 @@ int main(int argc, char *argv[])
     unsigned long long int writeIndex = 0;
     char readbuffer[2048];
     unsigned long long readIndex = -1;
-
-    bool isopenback = 0;
 
     // DCFTest主循环
     do
@@ -198,7 +205,16 @@ int main(int argc, char *argv[])
         // DCFTest > query
         else if (strcmp(input_buffer->buffer, "query") == 0)
         {
-            DCFTest_query();
+            char query_buffer[MAX_LINE];
+            unsigned int length = MAX_LINE;
+            if (DCFTest_query(query_buffer, length) == FAILED)
+            {
+                printf("\033[33m[ FAILED ]\033[0m query cluster info failed.\n");
+            }
+            else
+            {
+                printf("\033[32m[ PASSED ]\033[0m cluster info: %s.\n", query_buffer);
+            }
         }
 
         // DCFTest > write <w_data>
@@ -229,7 +245,10 @@ int main(int argc, char *argv[])
             }
             else
             {
-                DCFTest_read(1, readIndex, readbuffer, 1024);
+                if (DCFTest_read(1, readIndex, readbuffer, 1024) == PASSED)
+                {
+                    printf("\033[32m[ PASSED ]\033[0m dcf read succeed, the index %ld read contents is %s.\n", readIndex, readbuffer);
+                }
             }
         }
 
@@ -301,48 +320,125 @@ int main(int argc, char *argv[])
         }
 
         // DCFTest > msg <n_ip> [m_msg]
-        else if (strncmp(input_buffer->buffer, "msg", 3) == 0)
-        {
-            char m_ip[MAX_LINE] = "";
-            char m_arg[MAX_LINE] = "";
-            char m_index[MAX_LINE] = "";
-            char m_rec[MAX_LINE] = "";
-            int arg_size = sscanf(input_buffer->buffer, "msg %s %s %s", m_ip, m_arg, m_index);
-            if (arg_size < 1)
-            {
-                printf("\033[34m[ REMIND ]\033[0m usage: msg <m_ip> read <m_index>.\n");
-                printf("\033[34m[ REMIND ]\033[0m option:\n");
-                printf("\033[34m[ REMIND ]\033[0m     -m_ip         target node ip.\n");
-                printf("\033[34m[ REMIND ]\033[0m     -m_index      read index.\n");
-            }
-            else if (strcmp(m_arg, "read") == 0)
-            {
-                printf("\033[32m[ RUN    ]\033[0m sending the message...\n");
-                if(DCFTest_msg(m_ip, m_index, m_rec) == PASSED)
-                {
-                    printf("\033[32m[ PASSED ]\033[0m %s: %s\n", m_ip, m_rec);
-                }
-            }
-        }
+        // else if (strncmp(input_buffer->buffer, "msg", 3) == 0)
+        // {
+        //     char m_ip[MAX_LINE] = "";
+        //     char m_arg[MAX_LINE] = "";
+        //     char m_index[MAX_LINE] = "";
+        //     char m_rec[MAX_LINE] = "";
+        //     int arg_size = sscanf(input_buffer->buffer, "msg %s %s %s", m_ip, m_arg, m_index);
+        //     if (arg_size < 1)
+        //     {
+        //         printf("\033[34m[ REMIND ]\033[0m usage: msg <m_ip> read <m_index>.\n");
+        //         printf("\033[34m[ REMIND ]\033[0m option:\n");
+        //         printf("\033[34m[ REMIND ]\033[0m     -m_ip         target node ip.\n");
+        //         printf("\033[34m[ REMIND ]\033[0m     -m_index      read index.\n");
+        //     }
+        //     else if (strcmp(m_arg, "read") == 0)
+        //     {
+        //         printf("\033[32m[ RUN    ]\033[0m sending the message...\n");
+        //         if(DCFTest_msg(m_ip, m_index, m_rec) == PASSED)
+        //         {
+        //             printf("\033[32m[ PASSED ]\033[0m %s: %s\n", m_ip, m_rec);
+        //         }
+        //     }
+        // }
 
         // DCFTest > back
-        else if (strcmp(input_buffer->buffer, "back") == 0)
+        // else if (strcmp(input_buffer->buffer, "back") == 0)
+        // {
+        //     pthread_t back_tid;
+        //     if(isopenback == 0)
+        //     {
+        //         if (pthread_create(&back_tid , NULL , start_server, NULL) == -1)
+        //         {
+        //             printf("\033[31m[ FAILED ]\033[0m pthread create failed.\n");\
+        //             isopenback = 1;
+        //         }
+        //     }
+        //     else
+        //     {
+        //         printf("\033[31m[ FAILED ]\033[0m the background has started.\n");
+        //     }
+        // }
+
+        // DCFTest > compare <index>
+        else if (strncmp(input_buffer->buffer, "compare", 7) == 0)
         {
-            pthread_t back_tid;
-            if(isopenback == 0)
+            char ip[MAX_LINE] = "";
+            char c_index[MAX_LINE] = "";
+            char c_rec[MAX_LINE] = "";
+
+            int arg_size = sscanf(input_buffer->buffer, "compare %s", c_index);
+            if (arg_size < 1)
             {
-                if (pthread_create(&back_tid , NULL , start_server, NULL) == -1)
-                {
-                    printf("\033[31m[ FAILED ]\033[0m pthread create failed.\n");
-                }
-                else 
-                {
-                    isopenback = 1;
-                }
+                printf("\033[34m[ REMIND ]\033[0m usage: compare <c_index>.\n");
+                printf("\033[34m[ REMIND ]\033[0m option:\n");
+                printf("\033[34m[ REMIND ]\033[0m     -c_index         data index.\n");
             }
             else
             {
-                printf("\033[31m[ FAILED ]\033[0m the background has started.\n");
+                unsigned long long commit_idx = -1;
+                unsigned long long input_idx = -1;
+                sscanf(c_index, "%ld", &input_idx);
+                
+                if (dcf_get_data_commit_index(1, node_id, &commit_idx) == -1)
+                {
+                    printf("\033[31m[ FAILED ]\033[0m get cluster min applied index failed.\n");
+                }
+                else if (input_idx < 0 || input_idx > commit_idx)
+                {
+                    printf("\033[31m[ FAILED ]\033[0m index out of line.\n");
+                }
+                else
+                {
+                    // 从cluster info中获取其他节点ip地址
+                    char query_buffer[MAX_LINE];
+                    unsigned int length = MAX_LINE;
+                    if (DCFTest_query(query_buffer, length) == FAILED)
+                    {
+                        printf("\033[33m[ FAILED ]\033[0m query cluster info failed.\n");
+                    }
+                    else
+                    {
+                        printf("\033[32m[ RUN    ]\033[0m send msg to all nodes...\n");
+
+                        char* temp_ip;
+                        char ip_set[MAX_LINE] = "";
+                        bool issame = 1;
+                        char rec_reg[MAX_LINE] = "";
+                        temp_ip = strtok(query_buffer, "\"ip\":\"");
+                        while (temp_ip != NULL) 
+                        {
+                            if (strstr(temp_ip, ".") && !strstr(ip_set, temp_ip))
+                            {
+                                strcat(ip_set, temp_ip);
+
+                                // printf("temp_ip: %s\n", temp_ip);
+                                if(DCFTest_msg(temp_ip, c_index, c_rec) == PASSED)
+                                {
+                                    printf("\033[32m[ ------ ]\033[0m %s (%s): %s\n", temp_ip, c_index, c_rec);
+                                }
+
+                                if (strcmp(rec_reg, "") == 0) 
+                                {
+                                    strcpy(rec_reg, c_rec);
+                                }
+
+                                if (strcmp(rec_reg, c_rec) != 0)
+                                {
+                                    printf("\033[31m[ PASSED ]\033[0m different.\n");
+
+                                }
+                            }
+
+                            temp_ip = strtok(NULL, "\"ip\":\"");
+                        }
+                        
+                        printf("\033[32m[ PASSED ]\033[0m same.\n");
+                    }
+                }
+                
             }
         }
 
@@ -360,6 +456,7 @@ int main(int argc, char *argv[])
             printf("\033[34m[ REMIND ]\033[0m read              read data from r_index.\n");
             printf("\033[34m[ REMIND ]\033[0m promote leader    promote follower to leader.\n");
             printf("\033[34m[ REMIND ]\033[0m demote follower   promote leader to follower.\n");
+            printf("\033[34m[ REMIND ]\033[0m compare           compare data in different .\n");
             printf("\033[34m[ REMIND ]\033[0m exit              exit DCFTest.\n");
         }
         

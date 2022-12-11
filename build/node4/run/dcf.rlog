@@ -5,3 +5,52 @@ UTC+8 2022-12-11 00:01:46.210|DCF|17449|ERROR>metadata init failed, error code=0
 UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>begin to clear_resource
 UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>deinit exception report
 UTC+8 2022-12-11 00:01:46.210|DCF|17449|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:21:53.775|DCF|62019|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:21:53.775|DCF|62019|INFO>[LOG] file './node4/run/dcf.rlog' is added
+UTC+8 2022-12-11 13:21:53.775|DCF|62019|INFO>LOG_SUPPRESS_BEGIN>[LOG] file './node4/debug/dcf.dlog' is added
+UTC+8 2022-12-11 13:21:53.777|DCF|62019|ERROR>metadata init failed, error code=0, error info=
+UTC+8 2022-12-11 13:21:53.777|DCF|62019|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:21:53.778|DCF|62019|INFO>deinit exception report
+UTC+8 2022-12-11 13:21:53.778|DCF|62019|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:24:35.371|DCF|62331|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:24:35.371|DCF|62331|INFO>[LOG] file './node4/run/dcf.rlog' is added
+UTC+8 2022-12-11 13:24:35.371|DCF|62331|INFO>LOG_SUPPRESS_BEGIN>[LOG] file './node4/debug/dcf.dlog' is added
+UTC+8 2022-12-11 13:24:35.373|DCF|62331|ERROR>metadata init failed, error code=0, error info=
+UTC+8 2022-12-11 13:24:35.373|DCF|62331|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:24:35.373|DCF|62331|INFO>deinit exception report
+UTC+8 2022-12-11 13:24:35.373|DCF|62331|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:24:43.091|DCF|62427|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:24:43.091|DCF|62427|INFO>[LOG] file './node4/run/dcf.rlog' is added
+UTC+8 2022-12-11 13:24:43.091|DCF|62427|INFO>LOG_SUPPRESS_BEGIN>[LOG] file './node4/debug/dcf.dlog' is added
+UTC+8 2022-12-11 13:24:43.093|DCF|62427|ERROR>metadata init failed, error code=0, error info=
+UTC+8 2022-12-11 13:24:43.093|DCF|62427|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:24:43.093|DCF|62427|INFO>deinit exception report
+UTC+8 2022-12-11 13:24:43.093|DCF|62427|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:25:46.929|DCF|62648|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:25:46.929|DCF|62648|INFO>[LOG] file './node4/run/dcf.rlog' is added
+UTC+8 2022-12-11 13:25:46.929|DCF|62648|INFO>LOG_SUPPRESS_BEGIN>[LOG] file './node4/debug/dcf.dlog' is added
+UTC+8 2022-12-11 13:25:46.931|DCF|62648|ERROR>metadata init failed, error code=0, error info=
+UTC+8 2022-12-11 13:25:46.931|DCF|62648|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:25:46.931|DCF|62648|INFO>deinit exception report
+UTC+8 2022-12-11 13:25:46.931|DCF|62648|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:26:38.846|DCF|62858|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:26:38.846|DCF|62858|INFO>[LOG] file './node4/run/dcf.rlog' is added
+UTC+8 2022-12-11 13:26:38.846|DCF|62858|INFO>LOG_SUPPRESS_BEGIN>[LOG] file './node4/debug/dcf.dlog' is added
+UTC+8 2022-12-11 13:26:38.848|DCF|62858|ERROR>metadata init failed, error code=0, error info=
+UTC+8 2022-12-11 13:26:38.848|DCF|62858|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:26:38.848|DCF|62858|INFO>deinit exception report
+UTC+8 2022-12-11 13:26:38.849|DCF|62858|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:29:35.975|DCF|63189|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:29:35.975|DCF|63189|INFO>[LOG] file './node4/run/dcf.rlog' is added
+UTC+8 2022-12-11 13:29:35.975|DCF|63189|INFO>LOG_SUPPRESS_BEGIN>[LOG] file './node4/debug/dcf.dlog' is added
+UTC+8 2022-12-11 13:29:35.978|DCF|63189|ERROR>metadata init failed, error code=0, error info=
+UTC+8 2022-12-11 13:29:35.978|DCF|63189|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:29:35.978|DCF|63189|INFO>deinit exception report
+UTC+8 2022-12-11 13:29:35.978|DCF|63189|INFO>clear_resource succeed
+UTC+8 2022-12-11 13:30:03.745|DCF|63413|INFO>[DCF]Logger init succeed
+UTC+8 2022-12-11 13:30:03.745|DCF|63413|INFO>[LOG] file './node4/run/dcf.rlog' is added
+UTC+8 2022-12-11 13:30:03.745|DCF|63413|INFO>LOG_SUPPRESS_BEGIN>[LOG] file './node4/debug/dcf.dlog' is added
+UTC+8 2022-12-11 13:30:03.747|DCF|63413|ERROR>metadata init failed, error code=0, error info=
+UTC+8 2022-12-11 13:30:03.747|DCF|63413|INFO>begin to clear_resource
+UTC+8 2022-12-11 13:30:03.747|DCF|63413|INFO>deinit exception report
+UTC+8 2022-12-11 13:30:03.747|DCF|63413|INFO>clear_resource succeed

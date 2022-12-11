@@ -16,7 +16,7 @@
 #include "dcf_demo.h"
 
 #define MAX_LINE 2048
-#define PORT 6001
+#define PORT 29319
 #define BACKLOG 10
 #define LISTENQ 6666
 #define MAX_CONNECT 20

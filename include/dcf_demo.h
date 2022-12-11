@@ -40,7 +40,7 @@ int DCFTest_set_param(int node_id);
 
 void DCFTest_write(bool isleader, inputBuffer *input_buffer, char *writeContents, unsigned long long *writeIndex);
 
-void DCFTest_read(unsigned int streamId, unsigned long long ReadIndex, char *ReadBuffer, unsigned int ReadLength);
+int DCFTest_read(unsigned int streamId, unsigned long long ReadIndex, char *ReadBuffer, unsigned int ReadLength);
 
 int DCFTest_start(int node_id, char *dcf_start_config);
 
@@ -50,4 +50,4 @@ int DCFTest_remove_node(int AddNode_id);
 
 void DCFTest_index(int node_id);
 
-void DCFTest_query();
+int DCFTest_query(char *query_buffer, unsigned int length);
